@@ -5,7 +5,7 @@ while (year < 1949 || year > 2010) {
     year = prompt("Has introducido una fecha incorrecta");
 }
 
-if (year >= 1949 && year <=1968) {
+if (year >= 1949 && year <= 1968) {
     confirm("Perteneces a la generacion: Baby Boomer");
 } else if (year >= 1969 && year <= 1980) {
     confirm("Perteneces a la generacion: Generacion X");
