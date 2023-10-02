@@ -5,6 +5,11 @@ while (number <= 0 || isNaN(number) || number == null) {
     number = Number(prompt("El numero introduce no es correcto, introducelo de nuevo"));
 }
 
+number % 2 == 0 ? isPar = true : isPar = false;
+
+isPar ? confirm("El numero introducido es par") : confirm("El numero introducido es impar");
+
+/*
 if (number % 2 == 0) {
     isPar = true;
 } else {
@@ -16,4 +21,4 @@ if (isPar) {
 } else {
     confirm("El numero introducido es impar");
 }
-
+*/
