@@ -1,19 +1,20 @@
+let number = prompt("Introduce un numero");
 
-let number = Number(prompt("Introduce un numero"));
-
-while (number != 0 || !isNaN(number) || number == null) {
+while (+number != 0 || isNaN(number) || number == null || number.trim() == "") {
     if (!isNaN(number)) {
-
+        console.log(isPrime(number));
     }
-    number = Number(prompt("Introduce un numero"));
+    number = prompt("Introduce un numero");
 }
 
 function isPrime(numero) {    
-    numero % 2 == 0 ? console.log(true) : console.log(false);
+    contador = 0;
+    for (let i = numero - 1; i > 0; i--) {
+        if (numero % i == 0) {
+            contador++;
+        }
+    }
 
-    /*if (numero % 2 == 0) {
-        console.log(true);
-    } else {
-        console.log(false);;
-    }*/
+    return contador == 1 ? true : false;
+
 }
