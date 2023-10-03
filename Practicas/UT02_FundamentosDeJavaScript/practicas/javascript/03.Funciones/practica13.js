@@ -1,9 +1,14 @@
-import isPrime from practica12.js;
+import isPrime from "./funcionIsPrime.js";
 
-let number = Number(prompt("Introduce un numero"));
+let number = (prompt("Introduce cuantos numeros primos quieres ver"));
+let contador = 0;
 
-while (number != 0) {
-    isPrime(number);
-    number = Number(prompt("Introduce un numero"));
+for (let k = 2; contador < number; k++) {
+
+    if (isPrime(k)) {
+        console.log(k);
+        contador++;
+    }
+
 }
 
