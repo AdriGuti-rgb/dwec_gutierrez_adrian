@@ -1,6 +1,6 @@
-let number1 = prompt("Introduce un numero");
+let number1 = Number(prompt("Introduce un numero"));
 let operador = prompt("Introduce un operador");
-let number2 = prompt("Introduce otro numero");
+let number2 = Number(prompt("Introduce otro numero"));
 
 console.log((calc(operador, number1, number2)));
 

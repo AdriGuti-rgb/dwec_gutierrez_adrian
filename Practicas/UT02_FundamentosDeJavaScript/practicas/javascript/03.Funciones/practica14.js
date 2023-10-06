@@ -13,3 +13,7 @@ function fact (total) {
     
     return cantidad;
 }
+
+function factVictor (num) {
+    return (num == 1) ? 1 : num * factVictor(num - 1);
+}
