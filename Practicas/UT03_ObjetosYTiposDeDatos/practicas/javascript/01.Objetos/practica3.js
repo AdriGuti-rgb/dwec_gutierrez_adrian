@@ -9,7 +9,7 @@ let profesores = {
     "DWEC": "Victor",
     "DWESp": "Daniel",
     "DIWp": "Carmen",
-    "DAWp": "Aida"
+    "DAW": "Aida"
 }
 
 console.log(intersectObject(asignaturas, profesores));
@@ -21,7 +21,7 @@ function intersectObject(object1, object2) {
     for (let key in object1) {
         for (let keys in object2) {
             if (key == keys) {
-                newObject[keys] = object2[keys];
+                newObject[key] = object2[keys];
             }
         }
     }
