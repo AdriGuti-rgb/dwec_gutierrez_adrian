@@ -7,16 +7,11 @@ let baseTo = Number(prompt("Dime la base en el que lo quieres"));
 console.log(convertBase(str, baseFrom, baseTo));
 
 function convertBase (str, baseFrom, baseTo) {
-    console.log(str.toString(2));
-    let converted = str;
     console.log(str);
     console.log(baseFrom);
     console.log(baseTo);
-    let number = str.parseInt(str, baseFrom);
-    if (baseFrom != 10) {
-        converted = str.toString();
-    }
+    let number = parseInt(str, baseFrom);
 
-    return converted.toString(baseTo);
+    return number.toString(baseTo);
 
 }

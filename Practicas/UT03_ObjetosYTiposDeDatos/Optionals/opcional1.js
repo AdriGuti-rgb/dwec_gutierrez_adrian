@@ -1,7 +1,6 @@
-console.log(countLetters("DAW DWEC"));
-console.log(countLetters("Hola mundo"));
+console.log(isHeterograma("Hola"));
 
-function countLetters (str) {
+function isHeterograma (str) {
 
     let object = {};
 
@@ -17,6 +16,14 @@ function countLetters (str) {
         }
     }
 
-    return object; 
+    for (let cantidad in object) {
+        if (object[cantidad] > 1) {
+            return false;
+        }
+    }
+
+    return true; 
+
+
 
 }
