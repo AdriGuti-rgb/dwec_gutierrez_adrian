@@ -6,16 +6,11 @@ function removeVowels (str) {
 
     let final = "";
 
-    for (let char of str) {
-        console.log(char);
-        if (char == "a" || char == "e"
-                || char == "i" || char == "o"
-                || char == "u" || char == "A"
-                || char == "E" || char == "I"
-                || char == "O" || char == "U") {
+    for (let k of str) {
+        if ("aeiouAEIOU".includes(k)) {
             continue;
         }
-        final = final + char;
+            final = final + k;
     }
 
     return final;

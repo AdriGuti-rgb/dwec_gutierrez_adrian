@@ -1,4 +1,3 @@
-
 let str = Number(prompt("Dime un numero"));
 let baseFrom = Number(prompt("Dime la base en la que esta"));
 let baseTo = Number(prompt("Dime la base en el que lo quieres"));
@@ -14,4 +13,7 @@ function convertBase (str, baseFrom, baseTo) {
 
     return number.toString(baseTo);
 
+    // return parseInt(str, baseFrom).toString(baseTo);
+
+    // let convertBase = (str, baseFrom, baseTo) => parseInt(str, baseFrom).toString(baseTo);
 }

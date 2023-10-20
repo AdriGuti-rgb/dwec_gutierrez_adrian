@@ -9,12 +9,14 @@ function countLetters (str) {
         if (char == " ") {
             continue;
         }
+        /*
         if (!object[char]) {
             object[char] = 1;
         } else {
-
             object[char] = object[char] + 1;
-        }
+        }*/
+
+        object[char] = !char in object ? object[char] + 1 : 1;
     }
 
     return object; 
