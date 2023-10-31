@@ -29,18 +29,12 @@ let arr = [
     }
 ]
 
-console.log(getUsernames());
+console.log(getNumberOfAlumnos("DWEC"));
 
-function getUsernames() {
+function getNumberOfAlumnos(str) {
 
-    let alumnos = [];
+    let alumnos = arr.filter( item => str == item.ciclo );
 
-    arr.forEach ( a => {
-        for (let char in a) {
-
-        }
-
-    });
-
-    return alumnos;
+    return alumnos.length;
+    
 }

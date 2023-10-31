@@ -29,17 +29,23 @@ let arr = [
     }
 ]
 
-console.log(getAlumnosByCiclo("DAW"));
+console.log(getUnsecurePass());
+console.log(getLongitudes("P@ssw0rd"));
+console.log(getLongitudes("1234ABC"));
+console.log(getLongitudes(""));
 
-function getAlumnosByCiclo(str) {
-    
-    let alumnos = [];
+function getUnsecurePass(){
 
-    arr.forEach ( a => {
-        if (str === a.ciclo) {
-            alumnos.push(`${a.nombre} ${a.ape1} ${a.ape2}`);
+
+
+    arr.forEach ( (item) => {
+        if (getLongitudes(item.pass)) {
+            
         }
     });
 
-    return alumnos;
+}
+
+function getLongitudes (pass) {
+    return pass.trim().length >= 1 && pass.trim().length <= 8;
 }

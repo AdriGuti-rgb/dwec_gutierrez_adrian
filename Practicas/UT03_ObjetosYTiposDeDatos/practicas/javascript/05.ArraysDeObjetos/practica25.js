@@ -29,17 +29,28 @@ let arr = [
     }
 ]
 
-console.log(getAlumnosByCiclo("DAW"));
+console.log(getAverages());
 
-function getAlumnosByCiclo(str) {
-    
-    let alumnos = [];
+function getAverages() {
 
-    arr.forEach ( a => {
-        if (str === a.ciclo) {
-            alumnos.push(`${a.nombre} ${a.ape1} ${a.ape2}`);
+    let media = 0;
+    let nuevoArr = [];
+    let contador = 0;
+
+    arr.forEach( (item) => {
+        for (let nota in item.notas) {
+            media = media + item.notas[nota];
+            contador++;
         }
+        
+        nuevoArr.push({
+            nombre : item.nombre + ' ' + item.ape1,
+            expediente : item.expediente,
+            nota_media : media / contador
+        });  
+        media = 0;
+        contador = 0;
     });
 
-    return alumnos;
+    return nuevoArr;
 }
