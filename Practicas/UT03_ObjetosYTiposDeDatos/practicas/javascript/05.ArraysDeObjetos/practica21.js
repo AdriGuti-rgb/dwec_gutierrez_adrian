@@ -26,6 +26,19 @@ let arr = [
             DIW: 5.2,
             DWES: 4,
         }
+    },
+    {
+        nombre: 'Juan',
+        ape1: 'Mázquez',
+        ape2: 'Hernández',
+        dni: '7340831',
+        expediente: '342',
+        pass: 'P@ssw0rd',
+        ciclo: 'DAW',
+        notas: {
+            DWEC: 8,
+            DWES: 4,
+        }
     }
 ]
 
@@ -35,14 +48,37 @@ function getAverageGrade(str) {
 
     let media = 0;
     let suma = 0;
+    let contador = 0;
 
-    arr.forEach ( a => {
-        suma = str === "DIW" ? suma + a.notas.DIW
-                    : str === "DWEC" ? suma + a.notas.DWEC
-                    : str === "DWES" ? suma + a.notas.DWES
-                    : suma = 0;
-        media = suma / arr.length;
-    });
+    // arr.forEach ( a => {
 
-    return `La media en ${str} es: ${media.toFixed(2)}`;
+    //     if (a.notas[str]) {
+    //         suma += a.notas[str];
+    //         contador++;
+    //     }
+        
+    //     media = suma / contador;
+
+    // });
+
+    // media = arr.reduce(function(suma, usuario) {
+    //     if (usuario.notas[str]) {
+    //         suma += usuario.notas[str];
+    //         contador++;
+    //     }
+    //     return suma;
+    // }, 0) /contador;
+
+    media = arr.reduce(function(objeto, usuario) {
+        if (usuario.notas[str]) {
+            objeto.suma += usuario.notas[str];
+            objeto.contador++;
+        }
+
+        return objeto;
+
+    }, {suma: 0, contador: 0} );
+
+    // return `La media en ${str} es: ${media.toFixed(2)}`;
+    return `La media en ${str} es: ${(media.suma / media.contador).toFixed(2)}`;
 }

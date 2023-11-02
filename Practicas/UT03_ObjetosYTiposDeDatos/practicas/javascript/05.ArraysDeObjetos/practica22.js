@@ -41,5 +41,8 @@ function getAlumnosByCiclo(str) {
         }
     });
 
+    // return arr.filter( ({ciclo}) => ciclo == str)
+    //     .map ( ({nombre, ape1, ape2}) => `${nombre} ${ape1} ${ape2}` );
+
     return alumnos;
 }

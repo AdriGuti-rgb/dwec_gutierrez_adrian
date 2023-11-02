@@ -9,7 +9,6 @@ console.log(isEqualArrr(arr1, arr2));
 function isEqualArr(arr1, arr2) {
 
     if (arr1.length != arr2.length) {
-        console.log("object");
         return false;
     }
 

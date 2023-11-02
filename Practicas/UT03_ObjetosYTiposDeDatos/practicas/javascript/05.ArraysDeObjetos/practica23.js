@@ -29,11 +29,13 @@ let arr = [
     }
 ]
 
-console.log(getNumberOfAlumnos("DWEC"));
+console.log(getNumberOfAlumnos("DAW"));
 
 function getNumberOfAlumnos(str) {
 
     let alumnos = arr.filter( item => str == item.ciclo );
+
+    // return arr.reduce( (acum, {ciclo}) => acum += ciclo == str ? 1 : 0, 0);
 
     return alumnos.length;
     
