@@ -30,22 +30,34 @@ let arr = [
 ]
 
 console.log(getUnsecurePass());
-console.log(getLongitudes("P@ssw0rd"));
-console.log(getLongitudes("1234ABC"));
-console.log(getLongitudes(""));
+console.log(isUnsecurePass("P@ssw0rd"));
+console.log(isUnsecurePass("1234ABC"));
+console.log(isUnsecurePass(""));
 
 function getUnsecurePass(){
 
+    return arr.filter ( ({pass}) => isUnsecurePass(pass));
 
-
-    arr.forEach ( (item) => {
-        if (getLongitudes(item.pass)) {
+    // arr.forEach ( (item) => {
+    //     if (getLongitudes(item.pass)) {
             
-        }
-    });
+    //     }
+    // });
 
 }
 
-function getLongitudes (pass) {
-    return pass.trim().length >= 1 && pass.trim().length <= 8;
+function isUnsecurePass (pass) {
+    let a = pass.split(''); // Descompongo la cadena en un array
+    let mayus = false;
+    let minus = false;
+    let num = false;
+    let long = a.length >= 8;
+
+    a.forEach( char => {
+        minus ||= "abcdefghijklmnñopqrstuvwxyz".includes(char);
+        mayus ||= "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ".includes(char);
+        num ||= "0123456789".includes(char);
+    });
+    
+    return (long && mayus && minus && num)
 }

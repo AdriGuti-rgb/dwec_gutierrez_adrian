@@ -52,5 +52,18 @@ function getAverages() {
         contador = 0;
     });
 
+    // return arr.map( ({nombre, ape1, ape2, expediente, notas}) =>
+    //     let nota = 0;
+    //     let cont = 0;
+
+    //     for (let asignaturas in notas)
+
+    //     return {
+    //         alumno: ``,
+    //         expediente,
+    //         nota: nota/cont;
+    //     }
+    // );
+
     return nuevoArr;
 }

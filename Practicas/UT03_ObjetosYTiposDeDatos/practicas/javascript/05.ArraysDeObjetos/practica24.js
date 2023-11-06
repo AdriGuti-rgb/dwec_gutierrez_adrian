@@ -41,6 +41,8 @@ function getUserNames() {
             a.ape2.charAt(0).toLowerCase();
         nickNames.push(nick);
     });
+
+    // arr.map ( ({nombre, ape1, ape2}) => `${nombre}${ape1[0]}${ape2[0]}`.toLowerCase());
     
     return nickNames;
     
