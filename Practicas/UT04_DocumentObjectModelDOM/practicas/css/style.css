@@ -11,3 +11,9 @@ a:visited {
     color: #0066CC;
 }
 
+button {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(156, 158, 156);
+}

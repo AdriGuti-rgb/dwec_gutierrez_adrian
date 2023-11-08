@@ -9,4 +9,69 @@ img {
     height: 25px;
 }
 
+a:link {
+    color: #0066CC;
+}
 
+a:visited {
+    color: #0066CC;
+}
+
+/* #footer {
+    position: fixed;
+    height: 150px;
+    bottom: 0;
+    left: 0;
+    background-color: #333; 
+    color: #fff; 
+    padding: 10px; 
+    width: 100%; 
+    text-align: center;
+} 
+
+.abajo {
+    display: inline-block;
+} */
+
+button {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(156, 158, 156);
+}
+
+footer {
+    position: fixed;
+    height: 300px;
+    bottom: 0;
+    left: 0;
+    /* background-color: #b8b7b7;  */
+    background-image: linear-gradient(to bottom, white, #00ff00);
+    color: #fff; 
+    padding: 10px; 
+    width: 100%; 
+    text-align: center;
+}
+
+/* main {
+    margin: 0;
+    padding: 0;
+    width: 100%; 
+    background-image: linear-gradient(to bottom, white, #00ff00);
+} */
+
+.abajo {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100%; /* Ajusta la altura del div centrado */
+}
+
+p {
+    color: black;
+}
+
+.buttons {
+    text-align: center; /* Alinea los botones horizontalmente en el centro del contenedor */
+    margin-top: 200px; /* Opcional: Agrega margen superior para separar los botones del contenido superior */
+}
