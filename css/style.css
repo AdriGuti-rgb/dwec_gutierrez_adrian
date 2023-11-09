@@ -41,6 +41,7 @@ footer {
     width: 100%; 
     text-align: center;
 } 
+<<<<<<< HEAD
 
 /* header {
     position: fixed;
@@ -61,8 +62,30 @@ footer {
     width: 100%; 
     /* background-image: linear-gradient(to bottom, white, #00ff00); 
 }  */
+=======
 
-.abajo {
+/* header {
+    position: fixed;
+    height: 100px;
+    top: 0;
+    left: 0;
+    /* background-color: #b8b7b7;  */
+    /* background-image: linear-gradient(to top, white, #ff008c); 
+    color: #000000; 
+     
+    width: 100%; 
+    /* text-align: center; 
+} */
+>>>>>>> a102db17e4be317e6f44ca1cf625b7072050dc36
+
+/* main {
+    position: fixed;
+    top: 100px;
+    width: 100%; 
+    /* background-image: linear-gradient(to bottom, white, #00ff00); 
+}  */
+
+abajo {
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -76,6 +99,7 @@ p {
 .buttons {
     text-align: center; /* Alinea los botones horizontalmente en el centro del contenedor */
     margin-bottom: 21%; /* Opcional: Agrega margen superior para separar los botones del contenido superior */
+<<<<<<< HEAD
 }
 
 /* * {
@@ -85,3 +109,6 @@ p {
     background-size: cover;
     background.size: 0% - 100%;
 }*/
+=======
+}
+>>>>>>> a102db17e4be317e6f44ca1cf625b7072050dc36
