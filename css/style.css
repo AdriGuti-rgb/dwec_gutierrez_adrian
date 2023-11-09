@@ -7,6 +7,7 @@ h1 {
 img {
     width: 50px;
     height: 25px;
+    
 }
 
 a:link {
@@ -17,21 +18,10 @@ a:visited {
     color: #0066CC;
 }
 
-/* #footer {
-    position: fixed;
-    height: 150px;
-    bottom: 0;
-    left: 0;
-    background-color: #333; 
-    color: #fff; 
-    padding: 10px; 
-    width: 100%; 
-    text-align: center;
-} 
-
-.abajo {
-    display: inline-block;
-} */
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,0,140,1) 0%, rgba(133,102,195,1) 15%, rgba(255,255,255,1) 63%, rgba(0,255,0,1) 100%); 
+}
 
 button {
     width: 100px;
@@ -42,30 +32,42 @@ button {
 
 footer {
     position: fixed;
-    height: 300px;
+    height: 193px;
     bottom: 0;
     left: 0;
-    /* background-color: #b8b7b7;  */
-    background-image: linear-gradient(to bottom, white, #00ff00);
+    /* background-image: linear-gradient(to bottom, white, #00ff00); */
     color: #fff; 
     padding: 10px; 
     width: 100%; 
     text-align: center;
-}
+} 
+
+/* header {
+    position: fixed;
+    height: 100px;
+    top: 0;
+    left: 0;
+    /* background-color: #b8b7b7;  */
+    /* background-image: linear-gradient(to top, white, #ff008c); 
+    color: #000000; 
+     
+    width: 100%; 
+    /* text-align: center; 
+} */
 
 /* main {
-    margin: 0;
-    padding: 0;
+    position: fixed;
+    top: 100px;
     width: 100%; 
-    background-image: linear-gradient(to bottom, white, #00ff00);
-} */
+    /* background-image: linear-gradient(to bottom, white, #00ff00); 
+}  */
 
 .abajo {
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    height: 100%; /* Ajusta la altura del div centrado */
-}
+    justify-content: center;
+    align-items: center; 
+    height: 100%; 
+} 
 
 p {
     color: black;
@@ -73,5 +75,13 @@ p {
 
 .buttons {
     text-align: center; /* Alinea los botones horizontalmente en el centro del contenedor */
-    margin-top: 200px; /* Opcional: Agrega margen superior para separar los botones del contenido superior */
+    margin-bottom: 21%; /* Opcional: Agrega margen superior para separar los botones del contenido superior */
 }
+
+/* * {
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: cover;
+    background.size: 0% - 100%;
+}*/
