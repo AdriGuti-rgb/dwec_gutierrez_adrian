@@ -5,11 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practica 6 (resultado)</title>
     <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        #btn {
+            width: 200px;
+            height: 100px;
+            background-color: aquamarine;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+        }
+
+        #btn:hover {
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+
+        #center {
+            left: 50%;
+            top: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>  
 
     <a href="../enunciado/practica6.html"><img src="../../img/volver.jpeg"></a>
-    
+
+    <div id="center">
+        <div id="btn">Cambiar color</div>
+    </div>
+
     <script src="../../javascript/practica6.js"></script>
 </body>
 </html>

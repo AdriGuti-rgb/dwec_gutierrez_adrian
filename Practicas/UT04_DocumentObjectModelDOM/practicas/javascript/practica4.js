@@ -22,3 +22,12 @@ span1.textContent = ps.length;
 span2.textContent = aSecond.getAttribute("href");
 span3.textContent = as.length;
 span4.textContent = count;
+
+
+// let links = document.getElementsByTagName("a");
+
+// num_google = Array.from(links)
+//     .map(item => item.href)
+//     .reduce( (acum, enlace) => {
+//         return enlace = "https://www.google.es" ? acum + 1 : acum;
+//     } , 0);
