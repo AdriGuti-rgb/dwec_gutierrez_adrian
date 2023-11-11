@@ -3,7 +3,7 @@ let a = document.createElement("a");
 
 const urls = {
     google: "https://www.google.com",
-    duckDuckGo: "https://www.duckduckgo.com",
+    duckduckGo: "https://www.duckduckgo.com",
     bing: "https://www.bing.com",
     ecosia: "https://www.ecosia.org",
     wolframAlpha: "https://www.wolframalpha.com",

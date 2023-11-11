@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 10 (resultado)</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        #btn {
+            width: 200px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+
+        button {
+            margin: 5px;
+        }
+
+        #center {
+            left: 50%;
+            top: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #btn::selection {
+            color: black;
+            background-color: aquamarine;
+        }
+
+        .medio {
+            left: 50%;
+            top: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>  
+
+    <a href="../enunciado/practica10.html"><img src="../../img/volver.jpeg" id="primera"></a>
+
+    <div id="center">
+        <div id="btn">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+    
+
+    <script src="../../javascript/practica10.js"></script>
+</body>
+</html>
