@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 12 (enunciado)</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    
+    <a href="../../../index.html"><img src="../../img/volver.jpeg"></a>
+    
+    <p><strong>PR0412 ToDo App: aplicación para guardar tareas (II)</strong></p>
+
+    <p>Vamos a mejorar la aplicación del ejercicio anterior añadiendo un botón para poder eliminar cada tarea. 
+        En el siguiente vídeo puedes ver la aplicación en funcionamiento.</p>
+
+    <iframe src="../../img/todo_02.mp4" frameborder="0" width="500" height="500" autplay ></iframe>
+
+    <p>Cosas que tienes que tener en cuenta:</p>
+
+    <ul>
+        <li>Cada botón tiene que tener su propio listener, así que cada vez que añadimos un elemento a la lista deberíamos:</li>
+            <ul>
+                <li>Crear el elemento &lt;li&gt; con el texto de la tarea</li>
+                <li>Crear el botón, asociarle el listener e insertarlo en el elemento&lt;li&gt;</li>
+                <li>Añadir el elemento &lt;li&gt; a la lista</li>
+            </ul>
+        <li>Un problema que vas a encontrar es que desde la función activada por el listener puedes obtener toda la información del nodo 
+                correspondiente al botón, pero, ¿cómo sabes cuál es el elemento &lt;li&gt; que corresponde a dicho nodo? 
+                Una posible solución puede ser asignar a cada elemento &lt;li&gt; un atributo id único 
+                (por ejemplo una cadena aleatoria de 4 caracteres) y almacenar esa información también en el botón mediante un atributo data-.
+        </li>
+        <li>Ese mismo identificador también te puede servir para localizar las tareas en el array guardado en memoria con todas las tareas, 
+            aunque esto obligará a que el array de tareas, en lugar de ser un array de cadenas, deberá ser un array de objetos, 
+            cada uno de ellos con una propiedad con el identificador y otra con el texto de la tarea.
+        </li>
+    </ul>
+
+    <p>Si utilizas la hoja de estilos facilitada ten en cuenta las clases y estructuras que utilices tiene que ser como se muestra en la siguiente imagen:</p>
+
+    <img src="../../img/pr0412.jpg" alt="Clases para la hoja de estilos"><br><br>
+
+    <a href="../resolucion/practica12.html"><button>Ver resultado</button></a>
+</body>
+</html>

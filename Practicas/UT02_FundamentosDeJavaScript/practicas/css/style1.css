@@ -1,4 +1,20 @@
-img {
+img:first-child {
     width: 25px;
     height: 25px;
+}
+
+a:link {
+    color: #0066CC;
+}
+
+a:visited {
+    color: #0066CC;
+}
+
+h1 {
+    text-align: right;   
+}
+
+ol > li {
+    margin-top: 10px;
 }

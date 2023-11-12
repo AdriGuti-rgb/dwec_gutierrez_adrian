@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 15 (enunciado)</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    
+    <a href="../../../index.html"><img src="../../img/volver.jpeg"></a>
+    
+    <p><strong>OPT0401: Frutería App (II)</strong></p>
+
+    <p>📣  Opcional</p>
+
+    <p>Vamos a seguir trabajando con la frutería con la que empezamos en la anterior práctica y, 
+        en esta ocasión, vamos a añadir un carrito de la compra.</p>
+
+    <p>El resultado final debe ser algo parecido a lo que se muestra en el siguiente vídeo:</p>
+
+    <iframe src="../../img/todo_04.mp4" frameborder="0" autoplay controls width="500" height="400"></iframe>
+
+    <p>Como vas a ver cuando te pongas con ello aquí se complica todo un poco más. Algunos consejos o pautas 
+        de lo que tienes que realizar:</p>
+
+    <ul>
+        <li>Asumimos que cada vez que se pulsa el botón Añadir añade 1 kg de producto a la cesta de la compra. 
+            Si se quieren comprar varios kilos hay que pulsar varias veces y no se pueden comprar fracciones de kilo.</li>
+        <li>Necesitarás un array global que almacene la cesta de la compra. Cada elemento de este array corresponderá 
+            a cada producto comprado por lo que pueden ser objetos con la misma estructura que los del array Products 
+            añadiéndole una propiedad con la cantidad de producto comprado.</li>
+        <li>Tienes que añadir un listener a cada botón que lanzará una función que se puede llamar, por ejemplo, 
+            addToCart(event). Esta función tiene que saber qué producto hemos comprado (recuerda que solo recoge información 
+            del elemento que disparó el evento), por lo que a cada botón deberás añadir un atributo data-id que almacene 
+            la fruta a la que corresponde.</li>
+        <li>Para actualizar la cesta de la compra, una buena opción será crear una función renderCart o como quieras llamarla, 
+            que redibuje la cesta completa a partir del array con la compra. Esta función la puedes invocar cada vez que 
+            un usuario añada un producto a la compra.</li>
+    </ul>
+
+    <a href="../resolucion/practica15.html"><button>Ver resultado</button></a>
+</body>
+</html>

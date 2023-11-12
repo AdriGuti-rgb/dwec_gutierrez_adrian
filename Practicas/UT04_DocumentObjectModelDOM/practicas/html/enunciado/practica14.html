@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 14 (enunciado)</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <a href="../../../index.html"><img src="../../img/volver.jpeg"></a>
+    
+    <p><strong>PR0414 Frutería App (I)</strong></p>
+
+    <p>En esta práctica vamos a diseñar una pequeña tienda online, por ejemplo, una frutería online. 
+        En este caso, vamos a suponer que la página recibe un fichero JSON con los datos de los productos 
+        a mostrar de una API REST y, a partir de estos datos, vamos a contruir la página. Como aún no 
+        hemos visto como recoger datos de una API, debes incluir el fichero JSON directamente en el código. 
+        Tienes el enlace al código en el apartado de recursos, únicamente tienes que copiar el contenido y 
+        pegarlo en tu fichero js.</p>
+    
+    <p>En esta primera práctica deberás mostrar los productos contenidos en el fichero JSON de 
+        forma similar a la siguiente imagen:</p>
+
+    <img src="../../img/pr0414.jpg" alt="Asi deberia quedar" width="500" height="400">
+    
+    <p>Algunas cuestiones que tienes que tener en cuenta:</p>
+
+    <p><strong>Recursos:</strong></p>
+    
+    <p>Aquí tienes un listado de recursos que necesitas para la práctica. Solo se facilita el CSS y el HTML del armazón, el resto deberás diseñarlo y crearlo tú mismo.</p>
+    
+        <ul>
+            <li><a href="https://vgonzalez165.github.io/dwec/assets/pr0414/productos.js">Listado de productos</a></li>
+            <li><a href="https://vgonzalez165.github.io/dwec/assets/pr0414/index.html" target="_blank">Armazón del fichero HTML</a></li>
+            <li><a href="https://vgonzalez165.github.io/dwec/assets/pr0414/style.css">Hoja de estilos</a></li>
+            <li><a href="https://colorhunt.co/palette/206a5d81b214ffcc29f58634">Paleta de colores</a></li>
+            <li><a href="https://www.figma.com/file/P1cR50rl4PNmVvPIKnIvuF/Fruter%C3%ADa-App-DAW?type=design&node-id=0-1&mode=design">Diseño en Figma</a></li>
+        </ul>
+    
+    <p><strong>Diagrama</strong></p>
+    
+    <p>En estas páginas que ya comienzan a tener una cierta complejidad es importante que tengas muy claro cuál será 
+        la estructura (clases, identificadores, …) que va a tener la página antes de empezar con la parte de JavaScript. 
+        Lo primero de todo, haz un esquema en papel o en alguna de las múltiples herramientas existentes 
+        (<a href="https://www.lucidchart.com/pages/">Lucidchart</a>, 
+        <a href="https://www.microsoft.com/es/microsoft-365/visio/flowchart-software">Visio</a>, 
+        <a href="http://dia-installer.de/">Dia</a>, …) donde veas 
+        que estructura va a tener el HTML, así como el nombre de clases e identificadores que 
+        utilizarás.</p>
+    
+    <p>Cuanto mejor planifiques tu página web más fácil te será programarla y menos problemas encontrarás.</p>
+    
+    <p>En la siguiente imagen tienes un ejemplo de algunos diagramas que yo crearía para esta página. La imagen de la 
+        izquierda con lo que espero que sería el resultado final está realizada con <a href="https://www.figma.com/">Figma</a> 
+        mientras que el esquema con las clases e identificadores de cada elemento lo he realizado con 
+        <a href="https://www.lucidchart.com/pages/">Lucidchart</a>.</p>
+
+    <img src="../../img/pr04142.jpg" alt="Diagramas de la pagina" width="500" height="400">
+
+    <p><strong>Código ordenado</strong></p>
+
+    <p>Ya empezamos a trabajar con páginas más elaboradas en las que aumenta el número de líneas de código, por lo que 
+        es cada vez más importante ser muy ordenado en el código.</p>
+
+    <p>Algunos consejos a tener en cuenta a este respecto son:</p>
+
+        <ul>
+            <li>Comenta el código con comentarios breves y descriptivos.</li>
+            <li>Ya empezamos a tener muchas variables por lo que elegir sus nombres adecuadamente es cada vez más importante.</li>
+            <li>Es buena idea establecer un tipo de nomenclatura que ayude a identificar qué contiene cada variable. 
+                Por ejemplo, las variables que contienen nodos del árbol DOM pueden comenzar por el tipo de etiqueta 
+                (divProducto o spanPrecio) o los arrays con listas de algo pueden comenzar por la cadena lst 
+                (por ejemplo, lstProductos).</li>
+            <li>Aprovecha las posibilidades de encapsulación que nos ofrecen las funciones. Por ejemplo, si en esta página 
+                vamos a crear un nodo HTML por cada producto, encapsula la creación del mismo en una función. Esta función 
+                se podría llamar createProduct, recoger como parámetros el nombre de la fruta, la imagen, el precio y el 
+                id y devolver el nodo HTML ya creado.</li>
+        </ul>
+
+    <p><strong>OPCIONAL</strong></p>
+
+    <p>¿Has acabado pronto? Intenta implementar un sistema para mostrar los productos por páginas de forma que en cada página 
+        únicamente se muestren, por ejemplo, 8 productos y mostrar en la parte inferior un sistema de navegación entre páginas.</p>
+
+    <img src="../../img/pr04143.jpg" alt="Paginado optativo" width="700" height="200"><br><br>
+
+    <a href="../resolucion/practica14.html"><button>Ver resultado</button></a>
+</body>
+</html>

@@ -2,7 +2,6 @@ let milisec = 0;
 let segs = 0;
 let min = 0;
 let hora = 0;
-
 let div = document.createElement("div");
 div.classList.add("medio")
 let start = document.getElementById("start");
@@ -13,7 +12,7 @@ let id;
 let crono = () => {
     id = setInterval( () => {
 
-    if (segs == 60) {
+    if (segs == 59) {
         min++;
         segs = 1;
     }
@@ -23,12 +22,12 @@ let crono = () => {
         milisec = 0;
     }
 
-    if (min == 60) {
+    if (min == 59) {
         hora++;
         min = 1;
     }
 
-    div.textContent = `${hora}:${min}:${segs}:${(milisec++).toFixed()}` ;
+    div.textContent = `${hora}:${min}:${segs}:${(milisec++).toFixed()}`;
     document.body.append(div)
     }, 100
 )}

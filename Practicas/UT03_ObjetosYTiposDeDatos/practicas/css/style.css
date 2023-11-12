@@ -14,3 +14,7 @@ a:visited {
 h1 {
     text-align: right;   
 }
+
+ol > li {
+    margin-top: 10px;
+}
