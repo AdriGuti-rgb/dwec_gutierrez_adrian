@@ -17,7 +17,7 @@ let crono = () => {
         segs = 1;
     }
 
-    if (milisec == 10) {
+    if (milisec == 9) {
         segs++;
         milisec = 0;
     }
@@ -27,7 +27,7 @@ let crono = () => {
         min = 1;
     }
 
-    div.textContent = `${hora}:${min}:${segs}:${(milisec++).toFixed()}`;
+    div.textContent = `${String(hora).padStart(2, "0")}:${String(min).padStart(2, "0")}:${String(segs).padStart(2, "0")}.${(milisec++).toFixed()}`;
     document.body.append(div)
     }, 100
 )}
