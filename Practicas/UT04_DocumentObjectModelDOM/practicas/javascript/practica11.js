@@ -3,9 +3,11 @@ let button = document.getElementById("add-button");
 
 button.addEventListener("click", () => {
     let input = document.getElementById("input-text");
-    arr.push(input.value);
-    input.value = "";
-    console.log(input);
+    if (input.value.trim() != "") {
+        arr.push(input.value);
+        input.value = "";
+    }
+    
     renderList();
 
     arr = [];

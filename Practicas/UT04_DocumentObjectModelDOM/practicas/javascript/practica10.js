@@ -48,8 +48,8 @@ reset.addEventListener("click", () => {
     milisec = 0;
     segs = 0;
     min = 0;
-    hora = 0;32
-    .
+    hora = 0;
+    
     div.textContent = `${String(hora).padStart(2, "0")}:${String(min).padStart(2, "0")}:${String(segs).padStart(2, "0")}.${(milisec++).toFixed()}`;
 })
 

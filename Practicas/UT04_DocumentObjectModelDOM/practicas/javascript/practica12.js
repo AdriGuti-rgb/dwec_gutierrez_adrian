@@ -4,19 +4,26 @@ let button = document.getElementById("add-button");
 
 button.addEventListener("click", () => {
     let input = document.getElementById("input-text");
-    arr.push(input.value);
-    input.value = "";
-
+    if (input.value.trim() != "") {
+        arr.push(input.value);
+        input.value = "".trim();
+    }
+    
     renderList();
 
-    arr = [];
 });
 
-if (arr.length > 0) {
-    console.log("hola");
-    let deleter = document.querySelector("span");
-    deleter.addEventListener ("click", handleClick);
-}
+setInterval( () => {
+    if (document.querySelectorAll("span") != null) {
+        let deleter = document.querySelectorAll("span");
+        
+        for (let spanDelete of deleter) {
+            spanDelete.addEventListener ("click", handleClick);
+        }
+
+    }
+}, 1000);
+
 
 function renderList () {
     let li = document.createElement("li");
@@ -42,8 +49,16 @@ function renderList () {
         li = document.createElement("li");
         span = document.createElement("span");
     }
+
 }
 
 function handleClick (e) {
-    console.log(e.currenTarget.dataset.id);
+    spans = document.querySelectorAll("span");
+
+    for (let span of spans) {
+        if (span.dataset.id == e.target.dataset.id) {
+            span.parentNode.remove();
+        }
+    }
+
 }
