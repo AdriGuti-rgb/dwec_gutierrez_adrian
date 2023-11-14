@@ -5,6 +5,7 @@ img:first-child {
 
 a:link {
     color: #0066CC;
+    text-decoration: none;
 }
 
 a:visited {

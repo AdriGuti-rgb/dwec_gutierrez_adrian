@@ -1,3 +1,10 @@
+body {
+    background-image: url("../img/js.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: url("../img/js.jpg") center center cover no-repeat fixed;
+}
+
 h1 {
     text-align: right;
     width: 100%;
@@ -10,12 +17,18 @@ img {
     
 }
 
+h3 {
+    color: pink;
+}
+
+
 a:link {
-    color: #0066CC;
+    color: pink;
+    text-decoration: none;
 }
 
 a:visited {
-    color: #0066CC;
+    color: pink;
 }
 
 
@@ -29,14 +42,16 @@ button {
 
 footer {
     position: fixed;
-    height: 193px;
+    height: 16px;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(to bottom, white, #00ff00);
+    /* background-image: linear-gradient(to bottom, white, #00ff00); */
+    /* background-image: linear-gradient(to bottom, white, black); */
     color: #fff; 
-    padding: 10px; 
     width: 100%; 
     text-align: center;
+    background-color: black;
+    font-size: 12px;
 } 
 
 /* header {
@@ -67,7 +82,7 @@ footer {
 } 
 
 p {
-    color: black;
+    color: white;
 }
 
 .buttons {
