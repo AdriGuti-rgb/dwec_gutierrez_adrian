@@ -11,6 +11,8 @@ button.addEventListener("click", () => {
     
     renderList();
 
+    arr = [];
+
 });
 
 setInterval( () => {
