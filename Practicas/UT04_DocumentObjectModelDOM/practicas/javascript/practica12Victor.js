@@ -14,7 +14,6 @@ function handleAddClick( e ) {
        if (txt) todos.push({
               task: txt,
               id: Math.trunc(Math.random()*(36**4)).toString(36).padStart(4, '0'),
-              cheked: true
        });
        renderTodoList();
 }
@@ -25,24 +24,14 @@ function handleEraseClick( e ) {
        renderTodoList();
 }
 
-
 // Funciones render
 function renderTodoList () {
        let ulList = document.querySelector('#todos ul');
        ulList.innerHTML = '';
 
-       todos.forEach( ( {task, id, cheked} ) => {
+       todos.forEach( ( {task, id} ) => {
               let liTodo = document.createElement('li');
               let spanBorrar =document.createElement('span');
-              let btn = document.createElement("div");
-
-              btn.classList.add("btn");
-              btn.textContent = "X";
-              btn.addEventListener ("click", () => {
-                     cheked ? liTodo.classList.add("checked") : liTodo.classList.remove("checked");
-                     cheked = !cheked;
-              });
-
               liTodo.classList.add('todo');
               liTodo.textContent = task;
               spanBorrar.classList.add('btn');
@@ -51,14 +40,11 @@ function renderTodoList () {
               spanBorrar.addEventListener( 'click', handleEraseClick );
               liTodo.append(spanBorrar);
               ulList.append(liTodo);
-              liTodo.append(btn)
               
               // ulList.innerHTML += `<li class="todo">${todoText}</li`;
        })
 }
-
+// ---
 document
        .getElementById('add-button')
        .addEventListener( 'click', handleAddClick );
-
-

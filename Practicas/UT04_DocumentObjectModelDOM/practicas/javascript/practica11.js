@@ -14,12 +14,11 @@ button.addEventListener("click", () => {
 });
 
 function renderList () {
-    for (let elemento of arr) {
+    let ul = document.querySelector("ul");
+
+    arr.forEach( item => {
         let li = document.createElement("li");
-        li.textContent = elemento;
-        let ul = document.querySelector("ul");
+        li.textContent = item;
         ul.append(li);
-    
-        li = document.createElement("li");
-    }
+    });
 }

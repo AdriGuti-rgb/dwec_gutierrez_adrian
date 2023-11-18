@@ -100,7 +100,7 @@
         #todos .btn {
             cursor: pointer;
             background-color: #6F0E18;
-
+            text-decoration: none;
             color: white;
             border-radius: 3px;
             margin-right: 10px;
@@ -114,12 +114,34 @@
         #todos .btn:hover {
             background-color: #961B1E;
         }
+
+        .checked {
+            text-decoration: line-through;
+            background-color: greenyellow !important; 
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>  
 
     <a href="../enunciado/practica13.html"><img src="../../img/volver.jpeg" id="primera"></a>
     
+    <div id="app">
+        <div id="form">
+            <p id="input-label">Introduce una tarea</p>
+            <div>
+                <input type="text" id="input-text">
+                <button id="add-button">Agregar</button>
+            </div>
+        </div>
+
+        <div id="todos">
+            <ul>
+                
+            </ul>
+        </div>
+    </div>
 
     <script src="../../javascript/practica13.js"></script>
 </body>

@@ -15,52 +15,46 @@ button.addEventListener("click", () => {
 
 });
 
-setInterval( () => {
-    if (document.querySelectorAll("span") != null) {
-        let deleter = document.querySelectorAll("span");
+// setInterval( () => {
+//     if (document.querySelectorAll("span") != null) {
+//         let deleter = document.querySelectorAll("span");
         
-        for (let spanDelete of deleter) {
-            spanDelete.addEventListener ("click", handleClick);
-        }
+//         for (let spanDelete of deleter) {
+//             spanDelete.addEventListener ("click", handleClick);
+//         }
 
-    }
-}, 1000);
+//     }
+// }, 1000);
 
 
 function renderList () {
-    let li = document.createElement("li");
-    let span = document.createElement("span");
+    
     let ul = document.querySelector("ul");
 
-    for (let elemento of arr) {
-        let id = (Math.random() * 10).toFixed(0);
-        for (let k = 0; k < 3; k++) {
-            id = id + (Math.random() * 10).toFixed(0);
-        }
-
-        li.textContent = elemento;
+    arr.forEach( item => {
+        let li = document.createElement("li");
+        let span = document.createElement("span");
+        let id = Math.trunc(Math.random() * 36**4).toString(36).padStart(4, "0");
+        
+        li.textContent = item;
         li.classList.add("todo")
         li.id = id;
         span.classList.add("btn");
         span.textContent = "Borrar";
         span.dataset.id = id;
+        span.addEventListener ("click", handleClick);
         
         ul.append(li);
         li.append(span)
-
-        li = document.createElement("li");
-        span = document.createElement("span");
-    }
-
+    });
 }
 
 function handleClick (e) {
     spans = document.querySelectorAll("span");
 
-    for (let span of spans) {
+    spans.forEach( span => {
         if (span.dataset.id == e.target.dataset.id) {
             span.parentNode.remove();
         }
-    }
-
+    });
 }
