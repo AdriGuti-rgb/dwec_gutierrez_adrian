@@ -49,7 +49,6 @@
             min-width: 350;
             background-color: #CA9E13;
         }
-
 /* Estilo para el contenedor principal de clase product */
 .product {
   display: flex;
@@ -61,6 +60,11 @@
 /* Estilo para el contenedor de la foto del producto */
 .product-foto {
   flex: 1;
+}
+
+img {
+  width: 100px;
+  height: 100px;
 }
 
 /* Estilo para el contenedor de los datos del producto */
@@ -88,12 +92,11 @@
 
 /* Estilo para el contenedor del botón */
 .btn {
-  background-color: #4CAF50; /* Color verde para el botón */
+  background-color: grey; /* Color verde para el botón */
   color: white;
   padding: 10px 15px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
   margin: 5px 0;
   cursor: pointer;
@@ -109,6 +112,25 @@
   /* Agrega estilos específicos según sea necesario */
 }
 
+/* Estilo para el div que contendrá texto y botones al final de la página */
+.bottom-section {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #f0f0f0;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Estilos para los botones en el div inferior */
+    .bottom-section button {
+      margin: 5px;
+      padding: 10px;
+      font-size: 14px;
+      cursor: pointer;
+      /* Otros estilos según sea necesario */
+    }
 
     </style>
 </head>
@@ -121,6 +143,12 @@
         <div id="products-section">
             <!-- Aquí es donde tienes que insertar los productos -->
         </div>
+        <div class="bottom-section">
+          <p>Texto aquí</p>
+          <button>Botón 1</button>
+          <button>Botón 2</button>
+        </div>
+
         <div id="cart-section">
             <!-- Espacio reservado para el carrito de la compra -->
         </div>

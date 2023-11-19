@@ -97,21 +97,24 @@ let products = [
     },
   
 ]
+let currentPage = 0;
+let itemsPerPage = 4;
+let totalPages = Math.trunc((products.length / itemsPerPage) - 1);
 
 function renderProducts () {
     let great = document.getElementById("products-section")
     great.innerHTML = "";
     // products.filter( ({name}) => name.toLowerCase().includes(text.toLowerCase()))
-        // .filter( (item, index) => Math.trunc(index / itemsPerPage) == currentPage )
+        products.filter( (item, index) => Math.trunc(index / itemsPerPage) == currentPage )
         // 0 -> 0 1 2 3 4 % 5 = 0 0.2 0.4 0.6 0.8
         // 1 -> 5 6 7 8 9 % 5 = 1 1.2 1.4 1.6 1.8
-        products.forEach( ({product, price, image}) => { // data es el array de data.js, que al estar los dos se comparten las cositas
+            .forEach( ({product, price, image}) => { // data es el array de data.js, que al estar los dos se comparten las cositas
         great.innerHTML += `
         <div class="product">
             <div class="product-foto"><img src="${image}"></img></div>
             <div class="product-data">
                 <div class="fruit-name">${product}</div>
-                <div class="price">${price}</div>
+                <div class="price">${price} €</div>
                 <div class="btn btn-char" id="data-id-product">Añadir</div>
             </div> 
         </div>
@@ -120,8 +123,10 @@ function renderProducts () {
     });
     // cargarBotones();
     // pages();
-
-
 }
 
 renderProducts();
+
+function cargarBotones () {
+  
+}
