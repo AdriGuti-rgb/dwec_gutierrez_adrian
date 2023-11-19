@@ -450,7 +450,7 @@ const data =  [
   },
   {
     name: "Palpatine",
-    height: 170,
+    height: 91862,
     mass: 75,
     hair_color: "grey",
     skin_color: "pale",

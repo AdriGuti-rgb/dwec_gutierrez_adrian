@@ -78,6 +78,7 @@ function getAverageGrade(str) {
         return objeto;
 
     }, {suma: 0, contador: 0} );
+    console.log(media);
 
     // return `La media en ${str} es: ${media.toFixed(2)}`;
     return `La media en ${str} es: ${(media.suma / media.contador).toFixed(2)}`;

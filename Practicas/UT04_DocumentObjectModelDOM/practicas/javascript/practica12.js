@@ -37,7 +37,7 @@ function renderList () {
         let id = Math.trunc(Math.random() * 36**4).toString(36).padStart(4, "0");
         
         li.textContent = item;
-        li.classList.add("todo")
+        li.classList.add("todo");
         li.id = id;
         span.classList.add("btn");
         span.textContent = "Borrar";
@@ -45,7 +45,7 @@ function renderList () {
         span.addEventListener ("click", handleClick);
         
         ul.append(li);
-        li.append(span)
+        li.append(span);
     });
 }
 

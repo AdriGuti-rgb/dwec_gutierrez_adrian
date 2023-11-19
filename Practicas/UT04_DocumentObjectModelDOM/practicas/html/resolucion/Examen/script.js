@@ -28,7 +28,7 @@ function renderCharacters() {
 }
 
 function cargarBotones(){
-    let details = document.querySelectorAll(".btn-char:last-of-type");
+    let details = document.querySelectorAll(".btn-char");
     details.forEach ( item => {
         item.addEventListener("click", handleDetailClick)
     });
@@ -41,13 +41,14 @@ function handleFilterClick (e) {
 
 function handleDetailClick (e) {
     let nameNew = e.target.parentNode.children[0].textContent;
-    let total = data.find( ({name}) => {
-        return nameNew == name;
-    });
+    // let total = data.find( ({name}) => {
+    //     return nameNew == name;
+    // });
 
-    // let total = data.find( ({name}) => nameNew == name );
+    let total = data.find( ({name}) => nameNew == name );
 
-    document.getElementById("height").textContent = total.name ;
+    document.getElementById("detail-name").textContent = total.name;
+    document.getElementById("height").textContent = total.height;
     document.getElementById("mass").textContent = total.mass;
     document.getElementById("eye-color").textContent = total.eye_color ? total.eye_color : "-";
     document.getElementById("hair-color").textContent = total.hair_color ? total.hair_color : "-";
@@ -110,11 +111,7 @@ function pages () {
         div.append(spanNext);
         div.append(spanLast);
     } else {
-        document.querySelector(".first").textContent = "Primera";
-        document.querySelector(".prev").textContent = "Anterior";
         document.querySelector(".none").textContent = `Página ${currentPage + 1} de ${totalPages + 1}`;
-        document.querySelector(".next").textContent = "Siguiente";
-        document.querySelector(".last").textContent = "Última";
     }
 }
 
