@@ -4,8 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practica 14 (resultado)</title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <!-- <link rel="stylesheet" href="../../css/style.css"> -->
     <style>
+.btn {
+            width: 100px;
+            height: 30px;
+            cursor: pointer;
+            background-color: #59c98f;
+            color: white;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9em;
+            margin: 5px;
+            float: right;
+
+        }
+
+        .price {
+          float: left;
+          margin-top: 10px;
+          margin-left: 30px;
+        }
+        .btn:hover {
+            transform: scale(1.04);
+            
+        }
+        .btn:active{
+          transform: scale(0.90);
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             box-sizing: border-box;
@@ -28,7 +57,7 @@
             background-color: #206A5D;
             color: white;
             font-size: 7em;
-            height: 200px;
+            height: 130px;
             font-weight: 700;
         }
 
@@ -49,89 +78,27 @@
             min-width: 350;
             background-color: #CA9E13;
         }
-/* Estilo para el contenedor principal de clase product */
-.product {
-  display: flex;
-  border: 1px solid #ccc;
-  margin: 10px;
-  padding: 10px;
-}
 
-/* Estilo para el contenedor de la foto del producto */
-.product-foto {
-  flex: 1;
-}
+        .product {
+            float: left;
+            margin-right: 100px;
+            margin-top: 10px;
+            margin-left: 50px;
+            box-shadow: 5px 5px 10px #923489;
+        }
 
-img {
-  width: 100px;
-  height: 100px;
-}
+        .product-data {
+          margin-top: -5px;
+          padding-bottom: 5px; 
+          
+        }
 
-/* Estilo para el contenedor de los datos del producto */
-.product-data {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-
-/* Estilo para el contenedor del nombre del producto */
-.fruit-name {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-/* Estilo para el contenedor del precio del producto */
-.price {
-  font-size: 16px;
-  color: #008000; /* Color verde para el precio */
-  margin-bottom: 5px;
-}
-
-/* Estilo para el contenedor del botón */
-.btn {
-  background-color: grey; /* Color verde para el botón */
-  color: white;
-  padding: 10px 15px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  margin: 5px 0;
-  cursor: pointer;
-}
-
-/* Estilo específico para el botón de agregar producto */
-.btn-add-product {
-  background-color: #008CBA; /* Color azul para el botón de agregar producto */
-}
-
-/* Estilo para el contenedor con el ID data-id-product */
-#data-id-product {
-  /* Agrega estilos específicos según sea necesario */
-}
-
-/* Estilo para el div que contendrá texto y botones al final de la página */
-.bottom-section {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: #f0f0f0;
-      padding: 10px;
-      text-align: center;
-    }
-
-    /* Estilos para los botones en el div inferior */
-    .bottom-section button {
-      margin: 5px;
-      padding: 10px;
-      font-size: 14px;
-      cursor: pointer;
-      /* Otros estilos según sea necesario */
-    }
-
+        .fruit-name {
+          background-color: rgb(22, 195, 22);
+          text-align: center;
+          padding-top: 6px;
+          padding-bottom: 6px;
+        }
     </style>
 </head>
 <body>  
@@ -142,11 +109,8 @@ img {
     <div id="main">
         <div id="products-section">
             <!-- Aquí es donde tienes que insertar los productos -->
-        </div>
-        <div class="bottom-section">
-          <p>Texto aquí</p>
-          <button>Botón 1</button>
-          <button>Botón 2</button>
+
+    
         </div>
 
         <div id="cart-section">

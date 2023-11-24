@@ -98,35 +98,64 @@ let products = [
   
 ]
 let currentPage = 0;
-let itemsPerPage = 4;
-let totalPages = Math.trunc((products.length / itemsPerPage) - 1);
+let itemsPerPage = 6;
+let totalPages = Math.ceil((products.length / itemsPerPage) - 1);
 
 function renderProducts () {
     let great = document.getElementById("products-section")
     great.innerHTML = "";
-    // products.filter( ({name}) => name.toLowerCase().includes(text.toLowerCase()))
         products.filter( (item, index) => Math.trunc(index / itemsPerPage) == currentPage )
         // 0 -> 0 1 2 3 4 % 5 = 0 0.2 0.4 0.6 0.8
         // 1 -> 5 6 7 8 9 % 5 = 1 1.2 1.4 1.6 1.8
-            .forEach( ({product, price, image}) => { // data es el array de data.js, que al estar los dos se comparten las cositas
-        great.innerHTML += `
-        <div class="product">
-            <div class="product-foto"><img src="${image}"></img></div>
-            <div class="product-data">
-                <div class="fruit-name">${product}</div>
-                <div class="price">${price} €</div>
-                <div class="btn btn-char" id="data-id-product">Añadir</div>
-            </div> 
-        </div>
+                .forEach( ({product, price, image}) => { 
+            great.innerHTML += `
+            <div class="product">
+                <div class="product-foto"><img src="${image}"></img></div>
+                <div class="product-data">
+                    <div class="fruit-name">${product}</div>
+                    <div class="price">${price} €/kg</div>
+                    <div class="btn btn-char" id="data-id-product">Añadir</div>
+                </div> 
+            </div>
         `
         // Si es null o undefined el casting a if lo hace a false
     });
-    // cargarBotones();
+    
+
+    // great.innerHTML += `<div class="bottom-section">
+    //           <button class="first">Anterior</button>
+    //           <span>Mostrando ${currentPage + 1} de ${totalPages + 1}</span>
+    //           <button class="next">Siguiente</button>
+    //     </div>`;
+
+        cargarBotones();
+    
     // pages();
 }
 
 renderProducts();
 
-function cargarBotones () {
+function handleAnteriorClick (e) {
+    if (currentPage > 0) {
+      console.log("Adios");
+      currentPage--;
+    }
   
+    console.log("Adiosa");
+    renderProducts();
 }
+
+function handlePostClick (e) {
+  if (currentPage < 0) {
+    console.log("Hola");
+    currentPage++;
+  }
+  console.log("Holasa");
+  renderProducts();
+}
+
+function cargarBotones () {
+  document.querySelector(".first").addEventListener("click", handleAnteriorClick)
+  document.querySelector(".next").addEventListener("click", handlePostClick);
+}
+

@@ -36,6 +36,7 @@ function cargarBotones(){
 
 function handleFilterClick (e) {
     text = document.getElementById("filter-text").value.trim();
+    currentPage = 0;
     renderCharacters();
 }
 
@@ -137,41 +138,41 @@ document
     .addEventListener("click", handleLastClick);
 
 
-    function cargarBotones() {
-         let detalleBoton = document.querySelectorAll(".character div:last-child");
-         detalleBoton.forEach(detalle =>{
-             detalle.addEventListener('click', boton=>{
-                 let nombreCaracter = boton.currentTarget.getAttribute("data-nombrecaracter");
-                 aniadirPropiedades(nombreCaracter);
-             });
-         });
-     }
+    // function cargarBotones() {
+    //      let detalleBoton = document.querySelectorAll(".character div:last-child");
+    //      detalleBoton.forEach(detalle =>{
+    //          detalle.addEventListener('click', boton=>{
+    //              let nombreCaracter = boton.currentTarget.getAttribute("data-nombrecaracter");
+    //              aniadirPropiedades(nombreCaracter);
+    //          });
+    //      });
+    //  }
     
-     function aniadirPropiedades(nombreCaracter) {
-         document.getElementById("detail-name").textContent = nombreCaracter;
-         let personaje = data.find(({name}) => name == nombreCaracter);
+    //  function aniadirPropiedades(nombreCaracter) {
+    //      document.getElementById("detail-name").textContent = nombreCaracter;
+    //      let personaje = data.find(({name}) => name == nombreCaracter);
         
-         document.getElementById("height").textContent = `${personaje.height} cm.`;
-         document.getElementById("mass").textContent = `${personaje.mass} kg.`;
-         let colorPelo = personaje.hair_color ? personaje.hair_color : '-';
+    //      document.getElementById("height").textContent = `${personaje.height} cm.`;
+    //      document.getElementById("mass").textContent = `${personaje.mass} kg.`;
+    //      let colorPelo = personaje.hair_color ? personaje.hair_color : '-';
         
-         document.getElementById("hair-color").textContent = (colorPelo !== '-') ? translate_colors[colorPelo].name : colorPelo;                                                   
-                                                             // (colorPelo == "blond") ? 
-                                                             // "Rubio" : (colorPelo == "black") ?
-                                                             // "Moreno" : (colorPelo == "brown") ?
-                                                             // "Castaño" : (colorPelo == null || colorPelo== undefined) ?
-                                                             // "-" : "Ninguno";
+    //      document.getElementById("hair-color").textContent = (colorPelo !== '-') ? translate_colors[colorPelo].name : colorPelo;                                                   
+    //                                                          // (colorPelo == "blond") ? 
+    //                                                          // "Rubio" : (colorPelo == "black") ?
+    //                                                          // "Moreno" : (colorPelo == "brown") ?
+    //                                                          // "Castaño" : (colorPelo == null || colorPelo== undefined) ?
+    //                                                          // "-" : "Ninguno";
     
-         document.getElementById("hair-color-filled").style.backgroundColor = (colorPelo !== '-') ? translate_colors[colorPelo].code : 'black';
-     // (textoPelo == "Rubio") ?
-     // "yellow" : (textoPelo == "Moreno") ?
-     // "black" : (textoPelo == "Castaño") ?
-     // "#5c330a" : "grey";
-         let colorOjos = personaje.eye_color ? personaje.eye_color : '-';
-         document.getElementById("eye-color").textContent = (colorOjos !== '-') ? translate_colors[colorOjos].name : colorOjos;
-         document.getElementById("eye-color-filled").style.backgroundColor = (colorOjos !== '-') ? translate_colors[colorOjos].code : "grey";
-         document.getElementById("birth-year").textContent = personaje.birth_year ? personaje.birth_year : "-";
-         document.getElementById("homeworld").textContent = personaje.homeworld.name ? personaje.homeworld.name : '-';
-         document.getElementById("population").textContent = personaje.homeworld.population ? personaje.homeworld.population : '-';
-     }
+    //      document.getElementById("hair-color-filled").style.backgroundColor = (colorPelo !== '-') ? translate_colors[colorPelo].code : 'black';
+    //  // (textoPelo == "Rubio") ?
+    //  // "yellow" : (textoPelo == "Moreno") ?
+    //  // "black" : (textoPelo == "Castaño") ?
+    //  // "#5c330a" : "grey";
+    //      let colorOjos = personaje.eye_color ? personaje.eye_color : '-';
+    //      document.getElementById("eye-color").textContent = (colorOjos !== '-') ? translate_colors[colorOjos].name : colorOjos;
+    //      document.getElementById("eye-color-filled").style.backgroundColor = (colorOjos !== '-') ? translate_colors[colorOjos].code : "grey";
+    //      document.getElementById("birth-year").textContent = personaje.birth_year ? personaje.birth_year : "-";
+    //      document.getElementById("homeworld").textContent = personaje.homeworld.name ? personaje.homeworld.name : '-';
+    //      document.getElementById("population").textContent = personaje.homeworld.population ? personaje.homeworld.population : '-';
+    //  }
 
