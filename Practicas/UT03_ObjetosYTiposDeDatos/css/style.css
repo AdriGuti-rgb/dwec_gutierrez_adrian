@@ -1,5 +1,5 @@
 body {
-    background-image: url("../../../../img/js.jpg");
+    background-image: url("../img/js.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -24,37 +24,6 @@ h1 {
     width: 100%;
 }
 
-h3 {
-    color: black;
-}
-
-button {
-    width: 100px;
-    height: 30px;
-    border-radius: 10px;
-    background-color: #F0DD50;
-}
-
-.buttons {
-    position: absolute;
-    bottom: 30px;
-    left: 44.9%;
-}
-
-#description {
-    position: absolute;
-    top: 40%;
-    left: 40px;
-    font-size: 23px;
-    background-color: lightblue;
-    width: 20%;
-    height: 33%;
-    border-radius: 20px;
-    border: 2px solid black;
-    box-shadow: 8px 8px 6px rebeccapurple;
-    text-align: center;
-}
-
 #iconoMenu {
     width: 60px;
     height: 60px;
@@ -71,6 +40,17 @@ button {
     padding: 10px;
     margin-right: -10px;
     margin-left: -10px;
+}
+
+#tercero {
+    scale: 2.50;
+    background-color: #0F889D;
+    box-shadow: 4px 4px 3px rebeccapurple;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: -10px;
+    margin-left: -10px;
+    text-decoration: underline 4px;
 }
 
 #segundo:hover {
@@ -184,6 +164,10 @@ button {
  
 }
 
+#contenedor ul {
+    padding: 0;
+}
+
 li {
     list-style: none;
 }
@@ -202,36 +186,84 @@ ol li:nth-child(1n + 1){
 
 #primerUl {
     float: left;
-    width: 27%;
-    height: 500px;
+    width: 14%;
+    height: 300px;
     background-color: lightblue;
-    padding-left: 30px;
+    padding-left: 20px;
     padding-top: 20px;
+    text-decoration: underline 3px;
 }
 
 #segundoUl {
     float: left;
-    width: 27%;
-    height: 500px;
+    width: 14%;
+    height: 300px;
     background-color: lightblue;
     margin-right: 90px;
     margin-left: 110px;
-    padding-left: 30px;
+    padding-left: 20px;
     padding-top: 20px;
+    text-decoration: underline 3px;
 }
 
 #tercerUl {
     float: right;
-    width: 27%;
-    height: 500px;
+    width: 14%;
+    height: 300px;
     background-color: lightblue;
-    padding-left: 30px;
+    padding-left: 20px;
     margin-right: 50px;
     padding-top: 20px;
-    
+    text-decoration: underline 3px;
+    margin-bottom: 20px;
+}
+
+#cuartoUl {
+    float: left;
+    width: 14%;
+    height: 300px;
+    background-color: lightblue;
+    padding-left: 20px;
+    padding-top: 20px;
+    text-decoration: underline 3px;
+}
+
+#quintoUl {
+    float: left;
+    width: 14%;
+    height: 300px;
+    background-color: lightblue;
+    margin-right: 90px;
+    margin-left: 110px;
+    padding-left: 20px;
+    padding-top: 20px;
+    text-decoration: underline 3px;
+}
+
+#sextoUl {
+    float: right;
+    width: 14%;
+    height: 300px;
+    background-color: lightblue;
+    padding-left: 20px;
+    margin-right: 50px;
+    padding-top: 20px;
+    text-decoration: underline 3px;
+}
+
+/* 
+ol ul {
+    margin-top: 50px;
 }
 
 ol ul li {
-    padding: 30px;
-    background-color: red;
-}
+    float: left;
+    padding: 10px;
+    background-color: #5DC1B9;
+    border-radius: 10px;
+    /* width: 40%;
+    height: 40px; 
+    margin-left: 79px !important;
+    margin-bottom: 35px;
+    box-shadow: 4px 4px 4px#5A8361;
+} */

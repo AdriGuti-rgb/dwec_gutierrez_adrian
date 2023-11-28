@@ -1,5 +1,5 @@
 body {
-    background-image: url("../../../../img/js.jpg");
+    background-image: url("../img/js.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -155,83 +155,48 @@ button {
 
 /* Lista */
 
-#centrado ul {
+ul {
     position: absolute;
     top: 12%;
     left: 18%;
     font-size: 30px;
 }
 
-#centrado li {
+li {
     list-style: none;
     float: left;
     margin-right: 70px;
 }
 
-#centrado li:hover {
+li:hover {
     /* margin-left: 20px; */
     cursor: pointer;
     text-decoration: underline 4px;
 }
 
-#centrado li:active {
+li:active {
     text-decoration: underline 4px;
 } 
 
-#contenedor {
-    position: relative;
-    top: 10%;
- 
-}
-
-li {
-    list-style: none;
-}
-
-ol > div {
-    border-radius: 20px;
-    border: 2px solid black;
-    box-shadow: 8px 8px 6px rebeccapurple;
+footer {
+    position: fixed;
+    height: 23px;
+    bottom: 0;
+    left: 0;
+    /* background-image: linear-gradient(to bottom, white, #00ff00); */
+    /* background-image: linear-gradient(to bottom, white, black); */
+    color: #fff; 
+    width: 100%; 
     text-align: center;
-}
+    background-color: black;
+    font-size: 12px;
+} 
 
-ol li:nth-child(1n + 1){
-    font-size: 23px;
-    margin-left: -20px;
-}
-
-#primerUl {
-    float: left;
-    width: 27%;
-    height: 500px;
-    background-color: lightblue;
-    padding-left: 30px;
-    padding-top: 20px;
-}
-
-#segundoUl {
-    float: left;
-    width: 27%;
-    height: 500px;
-    background-color: lightblue;
-    margin-right: 90px;
-    margin-left: 110px;
-    padding-left: 30px;
-    padding-top: 20px;
-}
-
-#tercerUl {
-    float: right;
-    width: 27%;
-    height: 500px;
-    background-color: lightblue;
-    padding-left: 30px;
-    margin-right: 50px;
-    padding-top: 20px;
-    
-}
-
-ol ul li {
-    padding: 30px;
-    background-color: red;
+.abajo > p{
+    margin: 0px;
+    margin: 5px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100%; */
 }

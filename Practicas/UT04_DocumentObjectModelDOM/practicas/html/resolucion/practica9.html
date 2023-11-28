@@ -4,9 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practica 9 (resultado)</title>
-    <!-- <link rel="stylesheet" href="../../css/style.css"> -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .cell {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+        }
+
+        .black {
+            background-color: black;
+            color: white;
+            font-weight: bold;
+        }
+
+        .white {
+            background-color: white;
+            color: black;
+            font-weight: bold;
+        }
+
+        #board {
+            display: flex;
+            flex-direction: column;
+            border: 3px solid grey;
+            width: 640px;
+        }
+
+        .row {
+            display: flex;
+        }
+    </style>
 </head>
 <body>
+    <a href="../enunciado/practica9.html"><img src="../../img/volver.jpeg" id="primera"></a>
     
+    <div id="board">
+
+    </div>
+
+    <script src="../../javascript/practica9.js"></script>
 </body>
 </html>

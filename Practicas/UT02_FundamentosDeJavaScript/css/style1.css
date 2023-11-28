@@ -1,5 +1,5 @@
 body {
-    background-image: url("../../../../img/js.jpg");
+    background-image: url("../img/js.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -71,6 +71,17 @@ button {
     padding: 10px;
     margin-right: -10px;
     margin-left: -10px;
+}
+
+#segundo {
+    scale: 2.50;
+    background-color: #24A4A7;
+    box-shadow: 4px 4px 3px rebeccapurple;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: -10px;
+    margin-left: -10px;
+    text-decoration: underline 4px;
 }
 
 #segundo:hover {
@@ -184,6 +195,10 @@ button {
  
 }
 
+#contenedor ul {
+    padding: 0;
+}
+
 li {
     list-style: none;
 }
@@ -205,8 +220,9 @@ ol li:nth-child(1n + 1){
     width: 27%;
     height: 500px;
     background-color: lightblue;
-    padding-left: 30px;
+    padding-left: 20px;
     padding-top: 20px;
+    text-decoration: underline 3px;
 }
 
 #segundoUl {
@@ -216,8 +232,9 @@ ol li:nth-child(1n + 1){
     background-color: lightblue;
     margin-right: 90px;
     margin-left: 110px;
-    padding-left: 30px;
+    padding-left: 20px;
     padding-top: 20px;
+    text-decoration: underline 3px;
 }
 
 #tercerUl {
@@ -225,13 +242,24 @@ ol li:nth-child(1n + 1){
     width: 27%;
     height: 500px;
     background-color: lightblue;
-    padding-left: 30px;
+    padding-left: 20px;
     margin-right: 50px;
     padding-top: 20px;
-    
+    text-decoration: underline 3px;
+}
+
+ol ul {
+    margin-top: 50px;
 }
 
 ol ul li {
-    padding: 30px;
-    background-color: red;
+    float: left;
+    padding: 10px;
+    background-color: #5DC1B9;
+    border-radius: 10px;
+    /* width: 40%;
+    height: 40px; */
+    margin-left: 79px !important;
+    margin-bottom: 35px;
+    box-shadow: 4px 4px 4px#5A8361;
 }
