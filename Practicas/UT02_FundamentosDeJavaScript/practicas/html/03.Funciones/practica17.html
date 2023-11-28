@@ -6,10 +6,52 @@
     <title>Practica 17 Funciones (VI)</title>
     <link rel="stylesheet" href="../../css/style1.css">
     <script src="../../javascript/03.Funciones/practica17.js"></script>
+    <style>
+        img {
+            width: 25px;
+            height: 25px;
+        }
+
+        #description {
+            position: absolute;
+            top: 23%;
+            left: 32%;
+            font-size: 23px;
+            background-color: lightblue;
+            width: 34%;
+            height: 50%;
+            border-radius: 20px;
+            border: 2px solid black;
+            box-shadow: 8px 8px 6px rebeccapurple;
+            text-align: center;
+        }
+
+        strong {
+            font-variant: small-caps;
+            text-decoration: underline 3px;
+        }
+    </style>
 </head>
 <body>
     <a href="../../../index.html"><img src="../../img/volver.jpeg"></a>
 
     <h1>Ejercicio completado!!!</h1>
+
+    <div id="description">
+        <p><strong>PR0217: Funciones (VI)</strong></p>
+
+        <p>Mejora la función anterior para que realice las conversiones entre dos unidades de medida cualquiera. 
+            La función se llamará convertCapacity( n, from, to ), siendo el parámetro to la unidad de medida del 
+            valor n y from la unidad de medida a la que hay que convertirlo.</p>
+
+    <p>Ejemplos:</p>
+
+    <ul>
+        <li>convertCapacity( 5, 'GB', 'Megabyte' );     // 5000</li>
+        <li>convertCapacity( 500, 'B', 'KB' );          // 0.5</li>
+    </ul>
+
+    <p>Aunque hay formas más eficientes de hacerlo, con lo que hemos visto hasta ahora lo más sencillo es convertir 
+        el valor pasado a bytes y desde ahí a la unidad de medida de destino</div#description></p>
 </body>
 </html>

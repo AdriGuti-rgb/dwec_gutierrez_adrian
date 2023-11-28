@@ -6,10 +6,94 @@
     <title>Practica 16 Funciones (V)</title>
     <link rel="stylesheet" href="../../css/style1.css">
     <script src="../../javascript/03.Funciones/practica16.js"></script>
+    <style>
+        img {
+            width: 25px;
+            height: 25px;
+        }
+
+        #description {
+            position: absolute;
+            top: 16%;
+            left: 34%;
+            font-size: 23px;
+            background-color: lightblue;
+            width: 35%;
+            height: 74%;
+            border-radius: 20px;
+            border: 2px solid black;
+            box-shadow: 8px 8px 6px rebeccapurple;
+            text-align: center;
+        }
+
+        strong {
+            font-variant: small-caps;
+            text-decoration: underline 3px;
+        }
+
+        table {
+            margin-left: 30px;
+        }
+    </style>
 </head>
 <body>
     <a href="../../../index.html"><img src="../../img/volver.jpeg"></a>
 
     <h1>Ejercicio completado!!!</h1>
+
+    <div id="description"><p><strong>PR0216: Funciones (V)</strong></p>
+
+        <p>Escribe una función convertToBytes( capacity, from ) que reciba una cantidad y una unidad de medida y lo convierta a bytes. Las unidades de medida serán los múltiplos 
+            del byte hasta el Exabyte y en la unidad de medida se reconocerá tanto el nombre de la misma como la abreviatura, los cuales se muestran en la siguiente tabla:</p>
+        <table border>
+            <tr>
+                <th>Unidad de medida</th>
+                <th>Abreviatura</th>
+                <th>Número de bytes</th>
+            </tr>
+            <tr>
+                <td>Byte</td>
+                <td>B</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Kilobyte</td>
+                <td>KB</td>
+                <td>1.000</td>
+            </tr>
+            <tr>
+                <td>Megabyte</td>
+                <td>MG</td>
+                <td>1.000.000</td>
+            </tr>
+            <tr>
+                <td>Gigabyte</td>
+                <td>GB</td>
+                <td>1.000.000.000</td>
+            </tr>
+            <tr>
+                <td>Terabyte</td>
+                <td>TB</td>
+                <td>1.000.0000.000.000</td>
+            </tr>
+            <tr>
+                <td>Petabyte</td>
+                <td>PB</td>
+                <td>1.000.000.000.000.000</td>
+            </tr>
+            <tr>
+                <td>Exabyte</td>
+                <td>EB</td>
+                <td>1.000.000.000.000.000.000</td>
+            </tr>
+        </table>
+
+        <p>Por ejemplo:</p>
+
+        <ul>
+            <li>convertToBytes( 3, 'MB' );          // 3000000</li>
+            <li>convertToBytes( 5, 'Terabyte' );    // 5000000000000</li>
+        </ul>
+    </div>
 </body>
 </html>

@@ -6,10 +6,56 @@
     <title>Practica 9 Condicionales y bucles (V)</title>
     <link rel="stylesheet" href="../../css/style1.css">
     <script src="../../javascript/02.CondicionalesYBucles/practica9.js"></script>
+    <style>
+        img {
+            width: 25px;
+            height: 25px;
+        }
+
+        #description {
+            position: absolute;
+            top: 25%;
+            left: 30%;
+            font-size: 23px;
+            background-color: lightblue;
+            width: 40%;
+            height: 51%;
+            border-radius: 20px;
+            border: 2px solid black;
+            box-shadow: 8px 8px 6px rebeccapurple;
+            text-align: center;
+        }
+
+        strong {
+            font-variant: small-caps;
+            text-decoration: underline 3px;
+        }
+
+        li {
+            list-style:disc;
+        }
+    </style>
 </head>
 <body>
     <a href="../../../index.html"><img src="../../img/volver.jpeg"></a>
 
     <h1>Ejercicio completado!!!</h1>
+
+    <div id="description">
+        <p><strong>PR0209: Condicionales y bucles (V)</strong></p>
+
+        <p>Vamos a crear un script que preguntará al usuario la calle en la que vive y, en función de la calle que sea le recomendará qué linea de autobús tiene 
+            que tomar para ir al trabajo. Las diferentes líneas de autobús son:</p>
+
+        <ul>
+            <li>Línea 1: Calle Los Claveles, Calle El Rosal, Calle Las Hortensias y Calle Las Margaritas</li>
+            <li>Línea 2: Calle Teleno, Calle Catoute, Calle Peña Ubiña y Calle Vizcodillo</li>
+            <li>Línea 3: Calle Astorga, Calle La Bañeza y Calle Benavente</li>
+        </ul>
+
+        <p>
+            Cuando el usuario introduzca la calle se le mostrará un mensaje de la forma "Tienes que tomar la <linea_bus> para ir desde la <nombre_calle> hasta el trabajo".
+        </p>
+    </div>
 </body>
 </html>

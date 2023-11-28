@@ -6,10 +6,49 @@
     <title>Practica 15 Funciones (IV)</title>
     <link rel="stylesheet" href="../../css/style1.css">
     <script src="../../javascript/03.Funciones/practica15.js"></script>
+    <style>
+        img {
+            width: 25px;
+            height: 25px;
+        }
+
+        #description {
+            position: absolute;
+            top: 27%;
+            left: 34%;
+            font-size: 23px;
+            background-color: lightblue;
+            width: 30%;
+            height: 44%;
+            border-radius: 20px;
+            border: 2px solid black;
+            box-shadow: 8px 8px 6px rebeccapurple;
+            text-align: center;
+        }
+
+        strong {
+            font-variant: small-caps;
+            text-decoration: underline 3px;
+        }
+    </style>
 </head>
 <body>
     <a href="../../../index.html"><img src="../../img/volver.jpeg"></a>
 
     <h1>Ejercicio completado!!!</h1>
+
+    <div id="description">
+        <p><strong>PR0215: Funciones (IV)</strong></p>
+
+        <p>Escribe una función calc( operador, operando1, operando2 ) que reciba como parámetros una cadena con el 
+            operador y dos operandos, y devuelva el resultado de la operación indicada. Debe reconocer por lo menos 
+            seis operadores y mostrar un error en caso de invocarla con un operador erróneo. Por ejemplo:</p>
+
+        <ul>
+            <li>calc( 5, 7, '*' );      // 35</li>
+            <li>calc( 1, 0, '+' );      // 1</li>
+            <li>calc( 9, 3, '/' );      // 3</li>
+        </ul>
+    </div>
 </body>
 </html>
