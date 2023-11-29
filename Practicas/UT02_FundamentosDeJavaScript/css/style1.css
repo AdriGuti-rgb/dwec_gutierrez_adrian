@@ -21,6 +21,7 @@ a:visited {
 
 h1 {
     text-align: right;
+    bottom: 60px;
     width: 100%;
 }
 
@@ -58,8 +59,8 @@ button {
 #iconoMenu {
     width: 60px;
     height: 60px;
-    margin-top: 5px;
-    margin-left: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
     border-radius: 10px;
 }
 
@@ -71,6 +72,7 @@ button {
     padding: 10px;
     margin-right: -10px;
     margin-left: -10px;
+    opacity: 0.8;
 }
 
 #segundo {
@@ -102,6 +104,7 @@ button {
     padding: 10px;
     margin-right: -10px;
     margin-left: -10px;
+    opacity: 0.8;
 }
 
 #cuarto:hover {
@@ -112,6 +115,7 @@ button {
     padding: 10px;
     margin-right: -10px;
     margin-left: -10px;
+    opacity: 0.8;
 }
 
 #quinto:hover {
@@ -122,6 +126,7 @@ button {
     padding: 10px;
     margin-right: -10px;
     margin-left: -10px;
+    opacity: 0.8;
 }
 
 #sexto:hover {
@@ -132,6 +137,7 @@ button {
     padding: 10px;
     margin-right: -10px;
     margin-left: -10px;
+    opacity: 0.8;
 }
 
 #septimo:hover {
@@ -142,6 +148,7 @@ button {
     padding: 10px;
     margin-right: -10px;
     margin-left: -10px;
+    opacity: 0.8;
 }
 
 #octavo:hover {
@@ -152,6 +159,7 @@ button {
     padding: 10px;
     margin-right: -10px;
     margin-left: -10px;
+    opacity: 0.8;
 }
 
 #noveno:hover {
@@ -162,6 +170,7 @@ button {
     padding: 10px;
     margin-right: -10px;
     margin-left: -10px;
+    opacity: 0.8;
 }
 
 /* Lista */
@@ -262,4 +271,12 @@ ol ul li {
     margin-left: 79px !important;
     margin-bottom: 35px;
     box-shadow: 4px 4px 4px#5A8361;
+}
+
+ol ul li:hover {
+    transform: scale(1.04);
+}
+
+ol ul li:active {
+    transform: scale(0.98);
 }

@@ -27,8 +27,8 @@ h1 {
 #iconoMenu {
     width: 60px;
     height: 60px;
-    margin-top: 5px;
-    margin-left: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
     border-radius: 10px;
 }
 
@@ -161,7 +161,7 @@ h1 {
 #contenedor {
     position: relative;
     top: 10%;
- 
+    background-color: blue;
 }
 
 #contenedor ul {
@@ -186,8 +186,8 @@ ol li:nth-child(1n + 1){
 
 #primerUl {
     float: left;
-    width: 14%;
-    height: 300px;
+    width: 27%;
+    height: 290px;
     background-color: lightblue;
     padding-left: 20px;
     padding-top: 20px;
@@ -196,8 +196,8 @@ ol li:nth-child(1n + 1){
 
 #segundoUl {
     float: left;
-    width: 14%;
-    height: 300px;
+    width: 27%;
+    height: 290px;
     background-color: lightblue;
     margin-right: 90px;
     margin-left: 110px;
@@ -208,62 +208,74 @@ ol li:nth-child(1n + 1){
 
 #tercerUl {
     float: right;
-    width: 14%;
-    height: 300px;
+    width: 27%;
+    height: 290px;
     background-color: lightblue;
     padding-left: 20px;
     margin-right: 50px;
     padding-top: 20px;
     text-decoration: underline 3px;
-    margin-bottom: 20px;
+    
 }
 
 #cuartoUl {
     float: left;
-    width: 14%;
-    height: 300px;
+    width: 27%;
+    height: 290px;
     background-color: lightblue;
     padding-left: 20px;
     padding-top: 20px;
     text-decoration: underline 3px;
+    margin-top: 20px;
 }
 
 #quintoUl {
     float: left;
-    width: 14%;
-    height: 300px;
+    width: 27%;
+    height: 290px;
     background-color: lightblue;
     margin-right: 90px;
     margin-left: 110px;
     padding-left: 20px;
     padding-top: 20px;
     text-decoration: underline 3px;
+    margin-top: 20px;
 }
 
 #sextoUl {
     float: right;
-    width: 14%;
-    height: 300px;
+    width: 27%;
+    height: 290px;
     background-color: lightblue;
     padding-left: 20px;
     margin-right: 50px;
     padding-top: 20px;
     text-decoration: underline 3px;
+    
+    margin-top: 20px;
 }
 
-/* 
+
 ol ul {
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 ol ul li {
     float: left;
-    padding: 10px;
+    padding: 7px;
     background-color: #5DC1B9;
     border-radius: 10px;
     /* width: 40%;
-    height: 40px; 
+    height: 40px; */
     margin-left: 79px !important;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     box-shadow: 4px 4px 4px#5A8361;
-} */
+}
+
+ol ul li:hover {
+    transform: scale(1.04);
+}
+
+ol ul li:active {
+    transform: scale(0.98);
+}

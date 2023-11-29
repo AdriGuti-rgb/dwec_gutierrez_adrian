@@ -61,10 +61,10 @@
             footer.append(div);
             document.body.append(footer);
 
-            let footerABorrar = document.querySelectorAll("footer");
+            let footerABorrar = document.querySelector("footer");
             
             if (footerABorrar.length > 1) {
-                footerABorrar[1].remove();
+                footerABorrar.remove();
             }
         }
 

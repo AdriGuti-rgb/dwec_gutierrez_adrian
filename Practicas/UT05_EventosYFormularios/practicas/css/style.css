@@ -21,7 +21,7 @@ a:visited {
 
 h1 {
     text-align: right;
-    width: 100%;
+
 }
 
 h3 {
@@ -71,6 +71,18 @@ button {
     padding: 10px;
     margin-right: -10px;
     margin-left: -10px;
+    opacity: 0.8;
+}
+
+#segundo {
+    scale: 2.50;
+    background-color: #24A4A7;
+    box-shadow: 4px 4px 3px rebeccapurple;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: -10px;
+    margin-left: -10px;
+    text-decoration: underline 4px;
 }
 
 #segundo:hover {
@@ -91,6 +103,7 @@ button {
     padding: 10px;
     margin-right: -10px;
     margin-left: -10px;
+    opacity: 0.8;
 }
 
 #cuarto:hover {
@@ -101,6 +114,7 @@ button {
     padding: 10px;
     margin-right: -10px;
     margin-left: -10px;
+    opacity: 0.8;
 }
 
 #quinto:hover {
@@ -111,6 +125,7 @@ button {
     padding: 10px;
     margin-right: -10px;
     margin-left: -10px;
+    opacity: 0.8;
 }
 
 #sexto:hover {
@@ -121,6 +136,7 @@ button {
     padding: 10px;
     margin-right: -10px;
     margin-left: -10px;
+    opacity: 0.8;
 }
 
 #septimo:hover {
@@ -131,6 +147,7 @@ button {
     padding: 10px;
     margin-right: -10px;
     margin-left: -10px;
+    opacity: 0.8;
 }
 
 #octavo:hover {
@@ -141,6 +158,7 @@ button {
     padding: 10px;
     margin-right: -10px;
     margin-left: -10px;
+    opacity: 0.8;
 }
 
 #noveno:hover {
@@ -151,52 +169,113 @@ button {
     padding: 10px;
     margin-right: -10px;
     margin-left: -10px;
+    opacity: 0.8;
 }
 
 /* Lista */
 
-ul {
+#centrado ul {
     position: absolute;
     top: 12%;
     left: 18%;
     font-size: 30px;
 }
 
-li {
+#centrado li {
     list-style: none;
     float: left;
     margin-right: 70px;
 }
 
-li:hover {
+#centrado li:hover {
     /* margin-left: 20px; */
     cursor: pointer;
     text-decoration: underline 4px;
 }
 
-li:active {
+#centrado li:active {
     text-decoration: underline 4px;
 } 
 
-footer {
-    position: fixed;
-    height: 23px;
-    bottom: 0;
-    left: 0;
-    /* background-image: linear-gradient(to bottom, white, #00ff00); */
-    /* background-image: linear-gradient(to bottom, white, black); */
-    color: #fff; 
-    width: 100%; 
-    text-align: center;
-    background-color: black;
-    font-size: 12px;
-} 
+#contenedor {
+    position: relative;
+    top: 10%;
+ 
+}
 
-.abajo > p{
-    margin: 0px;
-    margin: 5px;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; 
-    height: 100%; */
+#contenedor ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+ol > div {
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 8px 8px 6px rebeccapurple;
+    text-align: center;
+}
+
+ol li:nth-child(1n + 1){
+    font-size: 23px;
+    margin-left: -20px;
+}
+
+#primerUl {
+    float: left;
+    width: 27%;
+    height: 500px;
+    background-color: lightblue;
+    padding-left: 20px;
+    padding-top: 20px;
+    text-decoration: underline 3px;
+}
+
+#segundoUl {
+    float: left;
+    width: 27%;
+    height: 500px;
+    background-color: lightblue;
+    margin-right: 90px;
+    margin-left: 110px;
+    padding-left: 20px;
+    padding-top: 20px;
+    text-decoration: underline 3px;
+}
+
+#tercerUl {
+    float: right;
+    width: 27%;
+    height: 500px;
+    background-color: lightblue;
+    padding-left: 20px;
+    margin-right: 50px;
+    padding-top: 20px;
+    text-decoration: underline 3px;
+}
+
+ol ul {
+    margin-top: 50px;
+}
+
+ol ul li {
+    float: left;
+    padding: 10px;
+    background-color: #5DC1B9;
+    border-radius: 10px;
+    /* width: 40%;
+    height: 40px; */
+    margin-left: 79px !important;
+    margin-bottom: 35px;
+    box-shadow: 4px 4px 4px#5A8361;
+}
+
+ol ul li:hover {
+    transform: scale(1.04);
+}
+
+ol ul li:active {
+    transform: scale(0.98);
 }
