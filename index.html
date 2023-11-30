@@ -48,7 +48,9 @@
 
     <script>
         function showDate() {
-            
+            if (document.querySelector("footer") != null) {
+                document.querySelector("footer").remove();
+            }
             let dateNow = new Date(Date());
             let footer = document.createElement("footer");
             let div = document.createElement("div");

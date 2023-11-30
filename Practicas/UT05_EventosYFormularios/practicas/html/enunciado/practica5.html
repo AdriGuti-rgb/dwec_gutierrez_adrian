@@ -3,9 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 5 (enunciado)</title>
+    <title>Practica 4 (resolucion)</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style> 
+        img {
+            width: 25px;
+            height: 25px;
+        }
+
+        #description {
+            position: absolute;
+            top: 10%;
+            left: 12%;
+            font-size: 23px;
+            background-color: lightblue;
+            width: 77%;
+            height: 82%;
+            border-radius: 20px;
+            border: 2px solid black;
+            box-shadow: 8px 8px 6px rebeccapurple;
+            text-align: center;
+        }
+
+        strong {
+            font-variant: small-caps;
+            text-decoration: underline 3px;
+        }
+
+        li {
+            list-style: disc;
+        }
+
+        #resultado {
+            position: absolute;
+            top: 94%;
+            left: 43%;
+        }
+
+        button {
+            width: 150px;
+            height: 40px;
+            font-size: 20px;
+            background-color: lightblue;
+            margin-right: 10px;
+            box-shadow: 2px 2px 4px rebeccapurple;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+    
+    </style>
 </head>
 <body>
-    
+
+    <a href="../../../index.html"><img src="../../img/volver.jpeg"></a>
+    <h1>Ejercicio completado!!!!</h1>
+    <div id="description">
+        <p><strong>PR0605: Captura de eventos del ratón (V)</strong></p>
+
+    <p>Vamos a mejorar el programa anterior. Para ello, en esta práctica tienes que realizar por los menos 3 de las siguientes mejoras propuestas.</p>
+    <ul>
+        <li>Incluye un botón que permita reiniciar el contador a cero.</li>
+        <li>Añade un selector que servirá para seleccionar la dificultad, a mayor dificultad menor será el tamaño medio de los recuadros.</li>
+        <li>Añade un cronómetro que limitará el tiempo que tiene el usuario</li>
+        <li>Crea un ranking de los usuarios con las mejores puntuaciones, para ello, el usuario deberá poder introducir su nombre antes de poder darle al botón de Start.</li>
+        <li>Añade un efecto psicodélico, haz que, cada vez que cambie de posición el recuadro cambie el color del mismo y también el del fondo de la ventana.</li>
+    </ul>
+    <p>Consejos para trabajar con tiempo en JavaScript</p>
+
+    <p>Probablemente, de todas las mejoras la que más dificultad tiene es la del establecimiento de un tiempo. 
+        Para ello necesitarás dos funciones que no hemos visto aún: setInterval y setTimeout. La primera permite 
+        ejecutar una función función cada cierto tiempo mientras que la segunda permite establecer un tiempo de 
+        espera tras el cual se ejecutará una función indicada una única vez.</p>
+
+    <p>En este caso necesitarás la primera. Básicamente, la idea será:</p>
+    <ul>
+        <li>Suponemos que el tiempo de juego es, por ejemplo, de 20 segundos.</li>
+        <li>Establecemos un contador a cero que se mostrará en pantalla.</li>
+        <li>Creamos un intervalo que ejecutará una función cada segundo.</li>
+        <li>La función incrementará el contador en uno y comprueba que no haya llegado hasta 20.</li>
+        <li>Cuando el contador llegue a 20 se limpia el intervalo con la función clearInterval y se muestra la puntuación del jugador.</li>
+    </ul>
+
+        Recursos:
+        <a href="https://vgonzalez165.github.io/dwec/assets/pr0505/index.html" style="text-decoration: 2px underline;">HTML</a>
+        <a href="https://vgonzalez165.github.io/dwec/assets/pr0505/style.css" style="text-decoration: 2px underline;">CSS</a>
+
+    </div>
+
+    <div id="resultado">
+        <a href="../resultado/practica5.html"><button>Resultado</button></a>
+        <a href="../../img/mockup.jpg" target="_blank"><button>Ejemplo</button></a>
+    </div>
 </body>
 </html>

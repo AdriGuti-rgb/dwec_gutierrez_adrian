@@ -22,8 +22,26 @@ function handlerColorClick (e) {
     } else {
         e.target.classList.add("selected");
     }
+    renderItem(e.target.id);
 }
 
 function handlerBannedClick (e) {
     e.target.classList.add("banned");
+    renderItem(e.target.id);
+}
+
+function renderItem (idItem) {
+    
+    let div = document.getElementById("container");
+    if (div != null) {
+        div.remove();
+    }
+
+    let divItem = document.createElement("div");
+    
+    divItem.textContent = "";
+    // divItem.id = "container";
+    divItem.textContent = `Has pulsado en la casilla número: ${idItem}`;
+    document.body.append(divItem);
+
 }
