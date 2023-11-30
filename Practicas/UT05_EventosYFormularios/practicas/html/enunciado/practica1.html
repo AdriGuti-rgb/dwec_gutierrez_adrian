@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1 (enunciado)</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        img {
+            width: 25px;
+            height: 25px;
+        }
+
+        #description {
+            position: absolute;
+            top: 25%;
+            left: 31%;
+            font-size: 23px;
+            background-color: lightblue;
+            width: 39%;
+            height: 50%;
+            border-radius: 20px;
+            border: 2px solid black;
+            box-shadow: 8px 8px 6px rebeccapurple;
+            text-align: center;
+        }
+
+        strong {
+            font-variant: small-caps;
+            text-decoration: underline 3px;
+        }
+
+        li {
+            list-style: disc;
+        }
+
+        #resultado {
+            position: absolute;
+            top: 80%;
+            left: 47%;
+        }
+
+        button {
+            width: 150px;
+            height: 40px;
+            font-size: 20px;
+            background-color: lightblue;
+            box-shadow: 2px 2px 4px rebeccapurple;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <a href="../../../index.html"><img src="../../img/volver.jpeg"></a>
+    <h1>Ejercicio completado!!!!</h1>
+    <div id="description">
+        <p><strong>PR0601: Captura de eventos del ratón (I)</strong></p>
+
+        <p>Crea una página web que contendrá una lista y añádele funcionalidad con JavaScript para que los elementos sean seleccionables de forma 
+            análoga a como se seleccionan en el explorador de archivos:</p>
+        <ul>
+            <li>Si se hace click en un elemento se selecciona ese y se deseleccionan los demás</li>
+            <li>Si se hace click en un elemento ya seleccionado se deselecciona</li>
+            <li>Si se hace Ctrl-Click en un elemento se selecciona/deselecciona sin modificar los demás</li>
+        </ul>
+        <p>La selección de los elementos la puedes realizar añadiendo una clase .selected que tenga asociado un color de fondo diferente en CSS.</p>
+
+        <p>Evita también la selección nativa del navegador en los clicks.</p>
+    </div>
+
+    <div id="resultado">
+        <a href="../resultado/practica1.html"><button>Resultado</button></a>
+    </div>
+
+</body>
+</html>
