@@ -3,9 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 6 (enunciado)</title>
+    <title>Practica 6 (enunciado)</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        img {
+            width: 25px;
+            height: 25px;
+        }
+
+        #description {
+            position: absolute;
+            top: 17%;
+            left: 27%;
+            font-size: 23px;
+            background-color: lightblue;
+            width: 53%;
+            height: 64%;
+            border-radius: 20px;
+            border: 2px solid black;
+            box-shadow: 8px 8px 6px rebeccapurple;
+            text-align: center;
+        }
+
+        strong {
+            font-variant: small-caps;
+            text-decoration: underline 3px;
+        }
+
+        li {
+            list-style: disc;
+        }
+
+        #resultado {
+            position: absolute;
+            top: 84%;
+            left: 44%;
+        }
+
+        button {
+            width: 150px;
+            height: 40px;
+            font-size: 20px;
+            background-color: lightblue;
+            margin-right: 10px;
+            box-shadow: 2px 2px 4px rebeccapurple;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-    
+
+    <a href="../../../index.html"><img src="../../img/volver.jpeg"></a>
+    <h1>Ejercicio completado!!!!</h1>
+    <div id="description">
+        <p><strong>PR0606: Captura de eventos del teclado</strong></p>
+
+        <p>Ahora que ya estarás familiarizado con los eventos del ratón, vamos a incluir los eventos del teclado. 
+            Para ello, vas a implementar el juego del ahorcado donde el usuario podrá indicar cada una de las 
+            letras tanto a través del teclado como utilizando un teclado virtual en pantalla.</p>
+        
+        <p>Consejos para realizar la práctica:</p>
+        <ul>
+            <li>Las palabras las puedes objener del fichero indicado en recursos, que tiene un listado de palabras 
+                en castellano con más de 7 letras.</li>
+            <li>Tambien en recursos dispones de imágenes para los diferentes estados del dibujo, aunque puedes 
+                cambiarlo si quieres.</li>
+            <li>Lo ideal es que todos los eventos que recojas (pulsación de tecla, click, …) se gestionen desde una 
+                misma función en la que se mirará el tipo de evento para ver de donde obtener la letra seleccionada 
+                (si es una pulsación de tecla estará en la propiedad key o code, mientras que si se trata de una 
+                pulsación se deberá obtener del atributo personalizado del elemento que recogió el evento).</li>
+            <li>Puedes ejercitar tus conocimientos de CSS o, si quieres centrarte en la lógica, utilizar el fichero 
+                CSS que se encuentra en recursos.</li>
+        </ul>
+
+        Recursos:
+        <a href="view-source:https://vgonzalez165.github.io/dwec/assets/pr0506/index.html" style="text-decoration: 2px underline;">HTML</a>
+        <a href="https://vgonzalez165.github.io/dwec/assets/pr0506/style.css" style="text-decoration: 2px underline;">CSS</a>
+        <a href="https://vgonzalez165.github.io/dwec/assets/pr0506/imgs/hangman.zip" style="text-decoration: 2px underline;">Imágenes</a>
+        <a href="https://vgonzalez165.github.io/dwec/assets/pr0506/words.js" style="text-decoration: 2px underline;">Listado de palabras</a>
+
+    </div>
+
+    <div id="resultado">
+        <a href="../resultado/practica6.html"><button>Resultado</button></a>
+        <a href="../../img/pr0506.mp4" target="_blank"><button>Ejemplo</button></a>
+    </div>
+
 </body>
 </html>
