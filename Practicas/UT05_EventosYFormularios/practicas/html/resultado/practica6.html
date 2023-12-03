@@ -26,6 +26,7 @@
 
         #hanged img {
             height: 320px;
+            width: 320px;
         }
 
         #spaces {
@@ -75,13 +76,13 @@
             background-color: #EFEFEF;
         }
 
-        #keyboard .fail {
+        /* #keyboard .fail {
             background-color: red;
         }
 
         #keyboard .succeed {
             background-color: greenyellow;
-        }
+        } */
 
         #keyboard .pressed {
             background-color:lightgoldenrodyellow;
@@ -94,11 +95,18 @@
             font-size: 4em;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             margin-top: 50px;
+        }
 
+        .fail {
+            background-color: red;
+        }
+
+        .succeed {
+            background-color: greenyellow;
         }
     </style>
-    <link rel="shortcut icon" href="imgs/hangman_09.png">
-    <link rel="icon" type="image/png" href="imgs/hangman_09.png">
+    <link rel="shortcut icon" href="../../img/hangman_09.png">
+    <link rel="icon" type="image/png" href="../../img/hangman_09.png">
 </head>
 <body>
     <a href="../enunciado/practica6.html"><img src="../../img/volver.jpeg"></a>
@@ -114,7 +122,7 @@
     </div>
     <div id="msg">Escoge una letra</div>
 
-    <!-- <script src="./words3.js"></script> -->
+    <script src="../../javascript/words.js"></script>
     <script src="../../javascript/practica6.js"></script>
 </body>
 </html>

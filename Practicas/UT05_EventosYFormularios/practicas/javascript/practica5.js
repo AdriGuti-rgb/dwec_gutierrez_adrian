@@ -15,6 +15,9 @@ let playerName = document.getElementById("player-input");
 
 // Dificultad
 let divDiff = document.getElementById("diff");
+let firstId = 1;
+let firtsWidth = 600;
+let firstHeight = 600;
 let globalWidth = 600;
 let globalHeiht = 600;
 let dificultades = [
@@ -58,7 +61,7 @@ function updateTime () {
 
     divTime.textContent = `${secs}.${milis}`;
 
-    if (secs == 10) {
+    if (secs == 20) {
         clearInterval(interval);
         running = false;
         divTime.textContent = `20.000`;
@@ -145,22 +148,14 @@ function handleResizeClick (e) {
 // Dificultad
 function handleDiffCLick (e) {
 
-    // console.log(e.target); // Div del click
-    // console.log(e.currentTarget); // Div padre
-
     let divSelected = document.querySelector(".selected"); 
     let diff = e.target;
     let level = e.target.textContent;
-
-    // console.log(level);
-    // console.log(dificultades);
     let total = dificultades.find( item => item.id == level);
 
-    // console.log(total);
     globalHeiht = total.height;
     globalWidth = total.width;
-    // console.log(globalHeiht);
-    // console.log(globalWidth);
+
     divSelected.classList.remove("selected");
     diff.classList.add("selected");
 
