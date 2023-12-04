@@ -1,7 +1,7 @@
 let random = Math.floor(Math.random() * words.length);
 let word = words[random];
 let spaces = document.getElementById("spaces");
-let level = 1;
+let level = 0;
 let acertadas = 0;
 let posibleLevels = "012345689";
 let img = document.createElement("img");
@@ -44,33 +44,13 @@ function handleLetterHang (e) {
         if (word.includes(e.key)) {
             aCambiarKeyBoard.classList.add("succeed");
             let letrasAcertadas = document.querySelectorAll(".space")
-            // word.split("")
-            //     .forEach( itemWord => {
-            //         Array.from(letrasAcertadas).forEach( itemSpace => {
-            //             if (itemWord == itemSpace.dataset.id) {
-            //                 itemSpace.textContent = itemSpace.dataset.id;
-            //             }
-            //         });
-            //     });
 
             Array.from(letrasAcertadas).forEach( itemSpace => {
-                if (word.includes(itemSpace.dataset.id)) {
+                if (word.includes(itemSpace.dataset.id) && itemSpace.dataset.id === e.key) {
                     itemSpace.textContent = itemSpace.dataset.id;
-                    // itemSpace.textContent = e.key;
-                    console.log(`Coinciden la ${itemSpace.dataset.id}`);
                     acertadas++;
                 }
-            });
-
-            
-            if (acertadas == word.length) {
-                removeEventListener("click", handleLetterHang);
-                removeEventListener("keydown", handleLetterHang)
-                let msg = document.getElementById("msg")
-                msg.textContent = "Has ganado";
-                msg.classList.add("succeed");
-            }
-            
+            });            
         } else {
             aCambiarKeyBoard.classList.add("fail");
             renderLevels(++level)
@@ -85,11 +65,22 @@ function handleLetterHang (e) {
 
         if (word.includes(id)) {
             aCambiarMouseKeyBoard.classList.add("succeed");
+            let letrasAcertadas = document.querySelectorAll(".space")
+
+            Array.from(letrasAcertadas).forEach( itemSpace => {
+                if (word.includes(itemSpace.dataset.id) && itemSpace.dataset.id === id) {
+                    itemSpace.textContent = itemSpace.dataset.id;
+                    acertadas++;
+                }
+            });
 
         } else {
             aCambiarMouseKeyBoard.classList.add("fail");
             renderLevels(++level)
         }
+    }
+    if (acertadas == word.length) {
+        endGame(true);
     }
 }
 
@@ -97,11 +88,7 @@ function renderLevels (level) {
     if (level < 10) {
         img.src =`../../img/hangman_0${level}.png`;
     } else {
-        removeEventListener("click", handleLetterHang);
-        removeEventListener("keydown", handleLetterHang)
-        let msg = document.getElementById("msg")
-        msg.textContent = "Has perdido";
-        msg.classList.add("fail");
+        endGame(false);
     }
 
     // if (posibleLevels.includes(level)) {
@@ -109,4 +96,12 @@ function renderLevels (level) {
     // } else {
     //     alert("No es valido el nivel");
     // }
+}
+
+function endGame (end) {
+    removeEventListener("click", handleLetterHang);
+    removeEventListener("keydown", handleLetterHang);
+    let msg = document.getElementById("msg")
+    end ? msg.textContent = "Has ganado" : msg.textContent = "Has perdido";
+    end ? msg.classList.add("succeed") : msg.classList.add("fail");
 }
