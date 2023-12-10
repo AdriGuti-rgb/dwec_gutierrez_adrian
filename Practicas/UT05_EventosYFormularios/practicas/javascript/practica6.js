@@ -3,7 +3,7 @@ let word = words[random];
 let spaces = document.getElementById("spaces");
 let level = 0;
 let acertadas = 0;
-let posibleLevels = "012345689";
+let posibleLevels = "0123456789";
 let img = document.createElement("img");
 let hanged = document.getElementById("hanged");
 let abecedario = "abcdefghijklmnñopqrstuvwxyz";
@@ -25,7 +25,7 @@ abecedario.split("")
     .forEach( item => {
         let spanAbc = document.createElement("span");
         spanAbc.addEventListener("click", handleLetterHang);
-        window.addEventListener("keydown", handleLetterHang);
+        window.addEventListener("keyup", handleLetterHang);
         spanAbc.textContent = `${item}`
         spanAbc.classList.add("key");
         spanAbc.dataset.id = item;
@@ -53,7 +53,7 @@ function handleLetterHang (e) {
             });            
         } else {
             aCambiarKeyBoard.classList.add("fail");
-            renderLevels(++level)
+            renderLevels(++level);
         }
     } else {
         let letrasMouse = document.getElementsByClassName("key");
@@ -76,7 +76,7 @@ function handleLetterHang (e) {
 
         } else {
             aCambiarMouseKeyBoard.classList.add("fail");
-            renderLevels(++level)
+            renderLevels(++level);
         }
     }
     if (acertadas == word.length) {
@@ -85,23 +85,19 @@ function handleLetterHang (e) {
 }
 
 function renderLevels (level) {
-    if (level < 10) {
+    if (posibleLevels.includes(level)) {
         img.src =`../../img/hangman_0${level}.png`;
     } else {
         endGame(false);
-    }
-
-    // if (posibleLevels.includes(level)) {
-    //     img.src =`../../img/hangman_0${level}.png`;
-    // } else {
-    //     alert("No es valido el nivel");
-    // }
+    }   
 }
 
 function endGame (end) {
-    removeEventListener("click", handleLetterHang);
-    removeEventListener("keydown", handleLetterHang);
-    let msg = document.getElementById("msg")
+    let spanDelete = document.querySelectorAll(".key");
+    Array.from(spanDelete)
+        .forEach( item => item.removeEventListener("click", handleLetterHang));
+    window.removeEventListener("keyup", handleLetterHang);
+    let msg = document.getElementById("msg");
     end ? msg.textContent = "Has ganado" : msg.textContent = "Has perdido";
     end ? msg.classList.add("succeed") : msg.classList.add("fail");
 }

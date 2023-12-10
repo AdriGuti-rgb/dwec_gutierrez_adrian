@@ -225,7 +225,7 @@ ol li:nth-child(1n + 1){
 
 #primerUl {
     float: left;
-    width: 27%;
+    width: 22%;
     height: 500px;
     background-color: lightblue;
     padding-left: 20px;
@@ -235,23 +235,33 @@ ol li:nth-child(1n + 1){
 
 #segundoUl {
     float: left;
-    width: 27%;
+    width: 22%;
     height: 500px;
     background-color: lightblue;
-    margin-right: 90px;
-    margin-left: 110px;
+    margin-right: 30px;
+    margin-left: 30px;
     padding-left: 20px;
     padding-top: 20px;
     text-decoration: underline 3px;
 }
 
 #tercerUl {
-    float: right;
-    width: 27%;
+    float: left;
+    width: 22%;
     height: 500px;
     background-color: lightblue;
     padding-left: 20px;
-    margin-right: 50px;
+    margin-right: 30px;
+    padding-top: 20px;
+    text-decoration: underline 3px;
+}
+
+#cuartoUl {
+    float: left;
+    width: 22%;
+    height: 500px;
+    background-color: lightblue;
+    padding-left: 20px;
     padding-top: 20px;
     text-decoration: underline 3px;
 }
@@ -267,7 +277,7 @@ ol ul li {
     border-radius: 10px;
     /* width: 40%;
     height: 40px; */
-    margin-left: 79px !important;
+    margin-left: 45px !important;
     margin-bottom: 35px;
     box-shadow: 4px 4px 4px#5A8361;
 }

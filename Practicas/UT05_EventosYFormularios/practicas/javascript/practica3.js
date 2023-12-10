@@ -38,7 +38,7 @@ function renderItem (idItem) {
     }
 
     let divItem = document.createElement("div");
-    
+
     divItem.textContent = "";
     // divItem.id = "container";
     divItem.textContent = `Has pulsado en la casilla número: ${idItem}`;
