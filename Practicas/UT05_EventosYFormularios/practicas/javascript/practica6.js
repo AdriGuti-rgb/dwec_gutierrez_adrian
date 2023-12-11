@@ -26,12 +26,19 @@ abecedario.split("")
         let spanAbc = document.createElement("span");
         spanAbc.addEventListener("click", handleLetterHang);
         window.addEventListener("keyup", handleLetterHang);
+        window.addEventListener("keypress", handlePressedHang);
         spanAbc.textContent = `${item}`
         spanAbc.classList.add("key");
         spanAbc.dataset.id = item;
         keyboard.append(spanAbc);
         spanAbc = document.createElement("span")
     });
+
+function handlePressedHang (e) {
+    let letrasKeyBoard = document.getElementsByClassName("key");
+    let letra = Array.from(letrasKeyBoard).find( item => item.dataset.id == e.key);
+    letra.classList.add("pressed");
+}
 
 function handleLetterHang (e) {
     if (e.target == document.body) {
@@ -41,15 +48,25 @@ function handleLetterHang (e) {
                         return e.key == item.textContent;
                     });
 
+        if (aCambiarKeyBoard.classList.contains("pressed")) {
+            aCambiarKeyBoard.classList.remove("pressed");
+        }
+
         if (word.includes(e.key)) {
             aCambiarKeyBoard.classList.add("succeed");
             let letrasAcertadas = document.querySelectorAll(".space")
 
             Array.from(letrasAcertadas).forEach( itemSpace => {
-                if (word.includes(itemSpace.dataset.id) && itemSpace.dataset.id === e.key) {
-                    itemSpace.textContent = itemSpace.dataset.id;
-                    acertadas++;
+                if (!(itemSpace.classList.contains("succeed") || itemSpace.classList.contains("fail"))) {
+                    if (word.includes(itemSpace.dataset.id) && itemSpace.dataset.id === e.key) {
+                        itemSpace.textContent = itemSpace.dataset.id;
+                        acertadas++;
+                        itemSpace.removeEventListener("click", handleLetterHang);
+                        itemSpace.removeEventListener("keyup", handleLetterHang);
+                        itemSpace.removeEventListener("keypressed", handleLetterHang);
+                    }
                 }
+
             });            
         } else {
             aCambiarKeyBoard.classList.add("fail");
@@ -58,10 +75,7 @@ function handleLetterHang (e) {
     } else {
         let letrasMouse = document.getElementsByClassName("key");
         let id = e.explicitOriginalTarget.dataset.id;
-        let aCambiarMouseKeyBoard = Array.from(letrasMouse)
-                            .find( (item) => {
-                        return id == item.textContent;
-                    });
+        let aCambiarMouseKeyBoard = Array.from(letrasMouse).find( (item) => id == item.textContent );
 
         if (word.includes(id)) {
             aCambiarMouseKeyBoard.classList.add("succeed");
@@ -71,6 +85,9 @@ function handleLetterHang (e) {
                 if (word.includes(itemSpace.dataset.id) && itemSpace.dataset.id === id) {
                     itemSpace.textContent = itemSpace.dataset.id;
                     acertadas++;
+                    itemSpace.removeEventListener("click", handleLetterHang);
+                    itemSpace.removeEventListener("keyup", handleLetterHang);
+                    itemSpace.removeEventListener("keypressed", handleLetterHang);
                 }
             });
 
@@ -94,9 +111,9 @@ function renderLevels (level) {
 
 function endGame (end) {
     let spanDelete = document.querySelectorAll(".key");
-    Array.from(spanDelete)
-        .forEach( item => item.removeEventListener("click", handleLetterHang));
+    Array.from(spanDelete).forEach( item => item.removeEventListener("click", handleLetterHang));
     window.removeEventListener("keyup", handleLetterHang);
+    window.removeEventListener("keypressed", handleLetterHang);
     let msg = document.getElementById("msg");
     end ? msg.textContent = "Has ganado" : msg.textContent = "Has perdido";
     end ? msg.classList.add("succeed") : msg.classList.add("fail");

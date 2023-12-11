@@ -3,9 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 8 (enunciado)</title>
+    <title>Practica 8 (enunciado)</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        img {
+            width: 25px;
+            height: 25px;
+        }
+
+        #description {
+            position: absolute;
+            top: 12%;
+            left: 21%;
+            font-size: 23px;
+            background-color: lightblue;
+            width: 58%;
+            height: 78%;
+            border-radius: 20px;
+            border: 2px solid black;
+            box-shadow: 8px 8px 6px rebeccapurple;
+            text-align: center;
+        }
+
+        strong {
+            font-variant: small-caps;
+            text-decoration: underline 3px;
+        }
+
+        li {
+            list-style: disc;
+        }
+
+        #resultado {
+            position: absolute;
+            top: 92%;
+            left: 47%;
+        }
+
+        button {
+            width: 150px;
+            height: 40px;
+            font-size: 20px;
+            background-color: lightblue;
+            margin-right: 10px;
+            box-shadow: 2px 2px 4px rebeccapurple;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-    
+
+    <a href="../../../index.html"><img src="../../img/volver.jpeg"></a>
+    <h1>Ejercicio completado!!!!</h1>
+    <div id="description">
+        <p><strong>PR0608: Formularios (II)</strong></p>
+
+        <p>Algo que seguro que has visto en muchos formularios es que, en función del valor de determinado campo, 
+            aparecen otros campos en el formulario o bien se rellenan con datos determinados por el valor 
+            introducido en el primer campo.</p>
+        
+        <p>En esta práctica tienes que hacer un formulario que imite ese comportamiento. Las características del mismo serán:</p>
+        <ul>
+            <li>El formulario tendrá tres selectores (comunidad autónoma, provincia y localidad) y un botón de enviar.</li>
+            <li>En la <a href="https://www.ine.es/daco/daco42/codmun/codmun11/11codmunmapa.htm" style="text-decoration: 2px underline;">
+                web del INE</a> tienes un listado con todas las localidades de España clasificadas por provincias. 
+                En esta práctica es suficiente con que consideres unas pocas localidades, pero tienes que hacerla 
+                pensando en que hay más de 8000 localidades en España y que la aplicación que hagas debería poder 
+                escalarse hasta esa cantidad.</li>
+            <li>Teniendo en cuenta el punto anterior, lo primero en lo que tienes que pensar es en el tipo de datos 
+                que vas a utilizar para almacenar la relación de comunidades, provincias y localidades.</li>
+            <li>Puedes hacer como en las imágenes anteriores, en las que el selector se encuentra vacío hasta 
+                que se rellena con los datos correspondientes, o mantener oculto el selector y mostrarlo cuando ya tenga datos.</li>
+        </ul>
+
+        <p>
+            Por ejemplo, las siguientes capturas corresponden al formulario de recogida de datos de 
+            <a href="https://reg.redsara.es/"style="text-decoration: 2px underline;">Red SARA</a>. 
+            Ahí se puede ver que el selector para introducir la provincia se rellena una vez que se ha escogido un país, 
+            y, a su vez, el selector para la localidad se rellena cuando se ha escogido una provincia.
+        </p>
+        
+        Recursos:
+        <a href="../../img/desp01.jpg"  target="_blank" style="text-decoration: 2px underline;">Imagen 1</a>
+        <a href="../../img/desp02.jpg"  target="_blank" style="text-decoration: 2px underline;">Imagen 2</a>
+        <a href="../../img/desp03.jpg"  target="_blank" style="text-decoration: 2px underline;">Imagen 3</a>
+
+    </div>
+        
+    <div id="resultado">
+        <a href="../resultado/practica8.html"><button>Resultado</button></a>
+    </div>
+
 </body>
 </html>

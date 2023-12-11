@@ -3,9 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 7 (enunciado)</title>
+    <title>Practica 7 (enunciado)</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        img {
+            width: 25px;
+            height: 25px;
+        }
+
+        #description {
+            position: absolute;
+            top: 12%;
+            left: 24%;
+            font-size: 23px;
+            background-color: lightblue;
+            width: 53%;
+            height: 70%;
+            border-radius: 20px;
+            border: 2px solid black;
+            box-shadow: 8px 8px 6px rebeccapurple;
+            text-align: center;
+        }
+
+        strong {
+            font-variant: small-caps;
+            text-decoration: underline 3px;
+        }
+
+        li {
+            list-style: disc;
+        }
+
+        #resultado {
+            position: absolute;
+            top: 84%;
+            left: 47%;
+        }
+
+        button {
+            width: 150px;
+            height: 40px;
+            font-size: 20px;
+            background-color: lightblue;
+            margin-right: 10px;
+            box-shadow: 2px 2px 4px rebeccapurple;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-    
+
+    <a href="../../../index.html"><img src="../../img/volver.jpeg"></a>
+    <h1>Ejercicio completado!!!!</h1>
+    <div id="description">
+        <p><strong>PR0607: Formularios (I)</strong></p>
+
+        <p>Algo habitual cuando creamos una cuenta en algún servicio es que se nos muestre de alguna forma el 
+            nivel de seguridad de la contraseña teniendo en cuenta criterios como la longitud o el número de 
+            tipos diferentes de caracteres (mayúsculas, minúsculas, dígitos, …).</p>
+        
+        <p>Crea una página con un formulario que tendrá tres campos: correo electrónico, contraseña y repetir 
+            contraseña, así como el botón para enviar. Tienes que realizar las siguientes validaciones:</p>
+        <ul>
+            <li>El correo electrónico deberá contener por lo menos una @ y un ., si no los tiene se debe mostrar 
+                un mensaje indicando que el correo no es válido (cuando pierda el foco). Como se trata de hacerlo 
+                en JavaScript, no puedes utilizar el atributo type="email", sino que tienes que leerlo como texto.</li>
+            <li>A medida que el usuario vaya introduciendo la contraseña se mostrará de alguna forma la seguridad 
+                de la misma (muy débil, débil, aceptable, fuerte, muy segura).</li>
+            <li>Si los valores de los campos de contraseña y repetir contraseña no son iguales se deberá mostrar 
+                de alguna manera.</li>
+            <li>Cuando el usuario pulse el botón de enviar se mostrará por consola el correo electrónico y 
+                la contraseña del usuario.</li>
+            <li>En la siguiente imagen puedes hacerte una idea de como dividir los tipos de contraseñas según la 
+                seguridad. Fuente: <a href="https://digg.com/tech/link/how-long-it-takes-to-get-password-hacked-1IvDFspF6p">digg.com</a></li>
+        </ul>
+
+        Recursos:
+        <a href="../../img/bruteforce.png"  target="_blank" style="text-decoration: 2px underline;">Contraseñas</a>
+
+    </div>
+        
+    <div id="resultado">
+        <a href="../resultado/practica7.html"><button>Resultado</button></a>
+    </div>
+
 </body>
 </html>

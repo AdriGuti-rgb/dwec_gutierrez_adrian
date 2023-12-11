@@ -3,9 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 9 (enunciado)</title>
+    <title>Practica 9 (enunciado)</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        img {
+            width: 25px;
+            height: 25px;
+        }
+
+        #description {
+            position: absolute;
+            top: 10%;
+            left: 18%;
+            font-size: 23px;
+            background-color: lightblue;
+            width: 65%;
+            height: 83%;
+            border-radius: 20px;
+            border: 2px solid black;
+            box-shadow: 8px 8px 6px rebeccapurple;
+            text-align: center;
+        }
+
+        strong {
+            font-variant: small-caps;
+            text-decoration: underline 3px;
+        }
+
+        li {
+            list-style: disc;
+        }
+
+        #resultado {
+            position: absolute;
+            top: 94.5%;
+            left: 42%;
+        }
+
+        button {
+            width: 150px;
+            height: 40px;
+            font-size: 20px;
+            background-color: lightblue;
+            margin-right: 10px;
+            box-shadow: 2px 2px 4px rebeccapurple;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-    
+
+    <a href="../../../index.html"><img src="../../img/volver.jpeg"></a>
+    <h1>Ejercicio completado!!!!</h1>
+    <div id="description">
+        <p><strong>PR0609: Formularios (III)</strong></p>
+
+        <p>Vamos a hacer una ventana de login o registro que se muestre en una ventana modal. Una ventana modal es un cuadro 
+            de diálogo que se muestra en pantalla sobre la página, normalmente oscureciéndola para centrar la atención en el 
+            contenido de la ventana modal.</p>
+        
+        <p>Vamos a hacer algo semejante a lo que se muestra en la siguiente imagen (Fuente de la imagen: 
+            <a href="https://csshint.com/login-signup-modal-window/" style="text-decoration: 2px underline;">csshint.com</a>)
+        </p>
+
+        <p>Tienes que tener en cuenta:</p>
+
+        <ul>
+            <li>Para hacer una ventana modal debemos combinar CSS con JavaScript, la idea es sencilla:
+                <ul>
+                    <li>La idea es que que la ventana modal se crea en el HTML como un elemento por encima de
+                            todos los demás, pero por defecto está oculto (display: none).</li>
+                    <li>Cuando queremos mostrarlo cambiamos el valor de esta propiedad desde JavaScript.</li>
+                    <li>Para simular que el fondo se oscurezca podemos hacer un elemento que ocupa toda la 
+                            pantalla con color negro y algo de transparencia.</li>
+                    <li>La propia ventana modal la creamos centrada sobre el elemento del punto anterior.</li>
+                </ul>
+            </li>
+            <li>Si te has fijado en la imagen, el diálogo tiene dos pestañas (login y sign up). Lo puedes implementar 
+                    en JavaScript recogiendo el click sobre cada una de las pestañas y desde ahí dibujar el contenido 
+                    de la ventana.</li>
+            <li>La ventana modal solo se podrá cerrar al hacer click en el botón de cerrar o al enviar el formulario.</li>
+            <li>Cuando se haga click en el botón de enviar formulario se mostrará por la consola la operación que se 
+                ha realizado (login o registro), así como el nombre de usuario y su contraseña.</li>
+            <li>Debes hacer las comprobaciones básicas sobre los formularios, mostrando los errores en pantalla.
+                <ul>
+                    <li>Que ningún campo puede quedar en blanco</li>
+                    <li>El email es una cadena que contiene por lo menos una arroba y un punto</li>
+                    <li>La contraseña tiene una longitud de por lo menos 8 caracteres</li>
+                    <li>Las dos contraseñas son iguales</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+        
+    <div id="resultado">
+        <a href="../resultado/practica9.html"><button>Resultado</button></a>
+        <a href="../../img/modal_login.gif"  target="_blank" style="text-decoration: 2px underline;"><button>Ejemplo</button></a>
+    </div>
+
 </body>
 </html>
