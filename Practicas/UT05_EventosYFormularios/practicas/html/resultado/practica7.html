@@ -11,14 +11,14 @@
         width: 25px;
     }
 
-    #board {
+    #container {
         position: absolute;
-        top: 5%;
-        left: 28%;
+        top: 36%;
+        left: 34%;
         font-size: 23px;
         background-color: lightblue;
-        width: 900px;
-        height: 800px;
+        width: 600px;
+        height: 250px;
         border-radius: 20px;
         border: 2px solid black;
         box-shadow: 8px 8px 6px rebeccapurple;
@@ -26,33 +26,76 @@
         padding-top: 10px;
     }
 
-    /* #container {
+    input[type="text"] {
+        border-radius: 5px;
+        margin-top: 30px;
+    }
+
+    input[type="button"] {
+        border-radius: 5px;
+        margin-top: 30px;
+        width: 70px;
+        height: 30px;
+        font-size: 19px;
+    }
+
+    #first {
         position: absolute;
-        top: 40%;
-        left: 5%;
-        font-size: 23px;
-        background-color: lightblue;
-        width: 13%;
-        height: 10%;
-        border-radius: 20px;
-        border: 2px solid black;
-        box-shadow: 4px 4px 3px rebeccapurple;
-        text-align: center;
-    }     */
+        top: -2px;
+        right: 30px;
+        background-color: lavenderblush;
+        font-size: 10px;
+        width: 190px;
+        border-radius: 5px;
+        height: 20px;
+        margin-top: 15px;
+        padding-top: 5px;
+    }
+
+    #second {
+        position: absolute;
+        top: 50px;
+        right: 80px;
+        font-size: 15px;
+        width: 150px;
+        border-radius: 5px;
+        height: 20px;
+        margin-top: 14px;
+        padding-top: 5px;
+    }
+
+    #third {
+        position: absolute;
+        top: 102px;
+        right: 125px;
+        background-color: lavenderblush;
+        font-size: 10px;
+        width: 150px;
+        border-radius: 5px;
+        height: 20px;
+        margin-top: 15px;
+        padding-top: 5px;
+    }
     </style>
 </head>
 <body>
 
     <a href="../enunciado/practica7.html"><img src="../../img/volver.jpeg"></a>
 
-    <!-- <div id="board">
-        <span id="info">De click en el cuadro para empezar</span>
-    </div> -->
-
-
-
     <div id="container">
-        
+        <form action="./practica7.html" method="post" name="login">
+            <label for="email">Introduzca un correo electrónico:</label>
+            <input type="text" name="email" id="email"><br>
+
+            <label for="firstPassword">Introduzca una contraseña:</label>
+            <input type="text" name="firstPassword" id="firstPassword"><br>
+
+            <label for="secondPassword">Repita contraseña:</label>
+            <input type="text" name="secondPassword" id="secondPassword">
+            <br>
+
+            <input type="button" name="send" value="Enviar">
+        </form>
     </div>
 
 

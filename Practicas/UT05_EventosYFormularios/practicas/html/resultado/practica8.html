@@ -11,14 +11,14 @@
         width: 25px;
     }
 
-    #board {
+    #container {
         position: absolute;
-        top: 5%;
-        left: 28%;
+        top: 36%;
+        left: 34%;
         font-size: 23px;
         background-color: lightblue;
-        width: 900px;
-        height: 800px;
+        width: 600px;
+        height: 250px;
         border-radius: 20px;
         border: 2px solid black;
         box-shadow: 8px 8px 6px rebeccapurple;
@@ -26,33 +26,44 @@
         padding-top: 10px;
     }
 
-    /* #container {
-        position: absolute;
-        top: 40%;
-        left: 5%;
-        font-size: 23px;
-        background-color: lightblue;
-        width: 13%;
-        height: 10%;
-        border-radius: 20px;
-        border: 2px solid black;
-        box-shadow: 4px 4px 3px rebeccapurple;
-        text-align: center;
-    }     */
+    select {
+        border-radius: 5px;
+        margin-top: 30px;
+    }
+
+    input[type="button"] {
+        border-radius: 5px;
+        margin-top: 30px;
+        width: 70px;
+        height: 30px;
+        font-size: 19px;
+    }
     </style>
 </head>
 <body>
 
     <a href="../enunciado/practica8.html"><img src="../../img/volver.jpeg"></a>
 
-    <!-- <div id="board">
-        <span id="info">De click en el cuadro para empezar</span>
-    </div> -->
-
-
-
     <div id="container">
-        
+        <form action="./practica8.html" method="get">
+            <div><label for="comunidad">Comunidad autónoma:</label>
+                <select name="comunidad" id="comunidad">
+                    <option value="" selected id="primerOpt">Seleccionar comunidad</option>
+                </select>
+            <br></div>
+            <div><label for="provincia">Provincia:</label>
+                <select name="provincia" id="provincia">
+                    <option value="" selected id="segundoOpt">Seleccionar provincia</option>
+                </select>
+            <br></div>
+            <div><label for="localidad">Localidad:</label>
+                <select name="localidad" id="localidad">
+                    <option value="" selected id="tercerOpt">Seleccionar localidad</option>
+                </select>
+            <br></div>
+
+            <input type="button" value="Enviar">
+        </form>
     </div>
 
 
