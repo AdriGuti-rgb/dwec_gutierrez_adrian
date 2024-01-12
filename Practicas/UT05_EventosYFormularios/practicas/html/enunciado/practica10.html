@@ -3,9 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 10 (enunciado)</title>
+    <title>Practica 10 (enunciado)</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        img {
+            width: 25px;
+            height: 25px;
+        }
+
+        #description {
+            position: absolute;
+            top: 20%;
+            left: 18%;
+            font-size: 23px;
+            background-color: lightblue;
+            width: 65%;
+            height: 60%;
+            border-radius: 20px;
+            border: 2px solid black;
+            box-shadow: 8px 8px 6px rebeccapurple;
+            text-align: center;
+        }
+
+        strong {
+            font-variant: small-caps;
+            text-decoration: underline 3px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #resultado {
+            position: absolute;
+            top: 83%;
+            left: 46%;
+        }
+
+        button {
+            width: 150px;
+            height: 40px;
+            font-size: 20px;
+            background-color: lightblue;
+            margin-right: 10px;
+            box-shadow: 2px 2px 4px rebeccapurple;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-    
+
+    <a href="../../../index.html"><img src="../../img/volver.jpeg"></a>
+    <h1>Ejercicio completado!!!!</h1>
+    <div id="description">
+        <p><strong>PR0610: Expresiones regulares</strong></p>
+
+    <p>Vamos a practicar ahora con expresiones regulares. Indica qué expresión regular utilizarías para identificar cada una de los siguienes patrones:</p>
+<ul>
+    <li>Una fecha de la forma ‘dd/mm/aaaa’. Ejemplos: '08/12/2022', '23/01/2021'</li>
+    <li>Un número de teléfono de la forma ‘(+xx) xxx xxxxxx’. Los espacios pueden ser opcionales. Ejemplos: '+34) 987 111 222, (+34)912345678</li>
+    <li>Un correo electrónico. Ejemplos: usuario@mail.com, alumno@educa.jcyl.es, alumno-daw@mail.es</li>
+    <li>Un código de color en hexadecimal. Ejemplo: #45a4ef, #AB3FE5</li>
+    <li>Una dirección IP. Ejemplos: 10.0.0.1, 192.168.255.1</li>
+    <li>Una URL. Ejemplos: https://google.com, http://google.es, http://www.google.com</li>
+    <li>Una contraseña que contenga por lo menos una minúscula, una mayúscula, un dígito y tenga una longitud mínima de 8 caracteres. Ejemplo: Villabalter1</li>
+    <li>Un NIF. Ejemplos: 10200300A, 2123456R</li>
+    <li>Una matrícula de coche. Ejemplo: 9119LJF</li>
+</ul>
+
+Para probarlas crea una página web con varios campos input de tipo texto (uno para cada expresión regular) que permitan introducir una cadena e indiquen si se ajusta o no se ajusta a la expresión regular.
+    </div>
+        
+    <div id="resultado">
+        <a href="../resultado/practica10.html"><button>Resultado</button></a>
+    </div>
+
 </body>
 </html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1 (resolucion)</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style> 
+    img {
+        height: 25px;
+        width: 25px;
+    }
+
+    #list {
+        position: absolute;
+        top: 30%;
+        left: 30%;
+        font-size: 23px;
+        background-color: lightblue;
+        width: 40%;
+        height: 50%;
+        border-radius: 20px;
+        border: 2px solid black;
+        box-shadow: 8px 8px 6px rebeccapurple;
+        text-align: center;
+    }
+
+    .selected {
+        background-color: aqua;
+    }
+
+    .item {
+        margin-top: 6px;
+    }
+
+    #tabla {
+        position: absolute;
+        top: 50px;
+        left: 100px;
+    }
+
+    td:nth-of-type(even) {
+        background-color: lightcoral;
+    }
+
+    td:nth-of-type(odd) {
+        background-color: lightgreen;
+    }
+
+    th {
+        background-color: lightseagreen;
+    }
+
+    </style>
+</head>
+<body>
+
+    <a href="../enunciado/practica1.html"><img src="../../img/volver.jpeg"></a>
+
+
+    <div id="list">
+        <table border id="tabla">
+            <tr>
+                <th>Nombre</th>
+                <th>Diameter</th>
+                <th>Climate</th>
+                <th>Population</th>
+            </tr>
+        </table>
+    </div>
+
+    <script src="../../javascript/practica1.js"></script>
+</body>
+</html>

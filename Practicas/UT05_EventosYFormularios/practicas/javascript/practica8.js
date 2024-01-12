@@ -140,10 +140,11 @@ function checkProvincia (e) {
     
     let provincia = "";
     if (document.querySelectorAll(".optLocalidad") != null) document.querySelectorAll(".optLocalidad").forEach( item => item.remove());
-
-    data.forEach( ({provincias}) => provincia = provincias.find( item => item.nombre == e.target.value));
-    provincia["localidades"].map( item => item)
-            .forEach( (item, index) => {
+    data.forEach( ({provincias}) => { 
+            let exists = provincias.find( ({nombre})=> nombre == e.target.value);
+            if (exists) provincia = exists;
+        });
+    provincia["localidades"].forEach( (item, index) => {
                 let selected = false;
                 if (index == 0) selected = true;
                 let option = new Option(item, item, false, selected);
@@ -158,16 +159,64 @@ function checkProvincia (e) {
 
 selectComunidad.addEventListener("change", checkComunidad);
 selectProvincia.addEventListener("change", checkProvincia);
-// const data2 = {
-//     "Castilla y Leon": {
-//         "Leon": ["Leon", "Fojedo", "La Bañeza"],
-//         "Zamora": ["Zamoa", "Coreses"]
+
+
+// Victor
+// const data = {
+//     'Castilla y León': {
+//         'León': [ 'León', 'San Andrés', 'La Bañeza', 'Ponferrada', 'Astorga' ],
+//         'Zamora': [ 'Zamora', 'Benavente' ],
+//         'Palencia': ['Palencia', 'Cervera de Pisuerga']
 //     },
-//     "Asturias": {
-//         "Asturias": ["Oviedo", "Gijon", "Avilés"]
+//     'Asturias': {
+//         'Asturias': [ 'Oviedo', 'Gijón', 'Avilés' ]
+//     },
+//     'Galicia': {
+//         'La Coruña': ['La Coruña', 'Sada'],
+//         'Lugo': ['Lugo']
 //     }
 // }
 
-// for (let prop in data2["Castilla y Leon"]) {
-//     console.log(prop);
+// // Referenciamos los elementos del DOM
+// const selectCom = document.getElementById('com');
+// const selectProv = document.getElementById('prov');
+// const selectLoc = document.getElementById('loc');
+
+// // Cargamos el select de las comunidades
+// selectCom.append(new Option(''));
+// for( const com in data ) {
+//     selectCom.append(new Option(com));
 // }
+
+// // Preparamos los listener
+// selectCom.addEventListener( 'change', e => {
+//     if ( e.target.value ) {
+//         selectProv.removeAttribute('disabled');
+//     } else {
+//         selectProv.disabled='disabled';
+//         selectProv.value='';
+//     }
+//     selectProv.innerHTML='';
+//     selectLoc.innerHTML='';
+//     selectProv.append(new Option(''));
+//     for (const prov in data[e.target.value]) {
+//         selectProv.append(new Option(prov));
+//     }
+// })
+
+// selectProv.addEventListener( 'change', e => {
+//     if ( e.target.value ) {
+//         selectLoc.removeAttribute('disabled');
+//     } else {
+//         selectLoc.value='';
+//         selectLoc.disabled='disabled';
+//     }
+//     selectLoc.innerHTML='';
+//     selectLoc.append( new Option('') );
+
+//     data[selectCom.value][selectProv.value].forEach( loc => {
+//         selectLoc.append( new Option(loc) );
+//     })
+// })
+
+
