@@ -60,16 +60,22 @@
     <a href="../../../index.html"><img src="../../img/volver.jpeg"></a>
     <h1>Ejercicio completado!!!!</h1>
     <div id="description">
-        <p><strong>PR0602: Captura de eventos del ratón (II)</strong></p>
+        <p><strong>PR0702: APIs REST (II)</strong></p>
 
-        <p>Diseña una página web en la que se mostrará una cuadrícula de 10x10 donde cada celda estará numerada con números consecutivos del 1 al 100.</p>
+        <p>Seguro que te has fijado que en la llamada a la API del ejercicio anterior únicamente te devuelve 10 planetas, aunque hay un total de 60.</p>
+
+        <p>Si observas los datos que devuelve verás que hay una propiedad next que indica la llamada que hay que realizar para obtener los siguientes 10 planetas.</p>
         
-        <p>Programa el comportamiento de la página para que:</p>
-        <ul>
-            <li>Cada vez que el usuario haga click sobre una casilla se seleccione (marcándola de otro color). Si la casilla ya está seleccionada se 
-                deselecciona (volviendo a quedar de color blanco).</li>
-            <li>Si el usuario hace click con el botón derecho del ratón la casilla se marca de color rojo y ya no podrá volver a modificarse.</li>
-        </ul>
+        <p>{
+            count: 60, 
+            next: "https://swapi.dev/api/planets/?page=2", 
+            previous: null, 
+            results: [
+                {
+                    name: "Tatooine", 
+                    rotation_period: "23", </p>
+        
+        <p>Modifica el ejercicio anterior para que muestre todos los planetas en lugar de únicamente los 10 primeros.</p>
     </div>
 
     <div id="resultado">

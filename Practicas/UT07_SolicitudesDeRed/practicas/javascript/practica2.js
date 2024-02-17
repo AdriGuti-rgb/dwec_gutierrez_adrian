@@ -1,28 +1,23 @@
 let tabla = document.getElementById("tabla");
 let paginaActual = 1;
 let totalPaginas;
-let contenedor = document.getElementById("contenedor");
-let oculto = document.getElementById("oculto");
 
 function getData() {
+    if (paginaActual == 1) {
+        tabla.innerHTML = `
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Diameter</th>
+                        <th>Climate</th>
+                        <th>Population</th>
+                    </tr>`;
+    }
 
-    oculto.classList.add("hidden");
-    contenedor.classList.remove("hidden");
-
-    fetch(`https://swapi.dev/api/planets?page=${paginaActual}`)
+    if (paginaActual < 7) {
+        fetch(`https://swapi.dev/api/planets?page=${paginaActual}`)
         .then( response => response.json())
         .then( data => { 
-            
-            totalPaginas = data.count / data.results.length;
-            tabla.innerHTML = `
-                <tr>
-                    <th>Nombre</th>
-                    <th>Diameter</th>
-                    <th>Climate</th>
-                    <th>Population</th>
-                </tr>`;
-
-            document.getElementById("numeroPaginas").textContent = `Página ${paginaActual} de ${totalPaginas++}`;
+            console.log(tabla);
 
             data.results.forEach(element => {
                 tabla.innerHTML += `
@@ -33,21 +28,10 @@ function getData() {
                     <td>${element.population}</td>
                 </tr>`;
             })
-
-            oculto.classList.remove("hidden");
-            contenedor.classList.add("hidden");
         });
+        paginaActual++
+        getData()   
+    }
 }
 
 getData();
-
-document.getElementById("siguiente").addEventListener( "click", () => {
-    if (paginaActual < 6) paginaActual++;
-    getData();
-})
-
-document.getElementById("anterior").addEventListener( "click", () => {
-    if (paginaActual > 1) paginaActual--;
-    getData();
-})
-

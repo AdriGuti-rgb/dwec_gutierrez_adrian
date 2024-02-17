@@ -12,33 +12,77 @@ const functions = {
     "matricula": testMatricula
 }
 
+document.forms.form.elements.send.addEventListener("click", e => e.preventDefault())
+
 Array.from(inputs).forEach( input => input.addEventListener("blur" ,functions[input.id]));
 
 function testDate (e) {
-    console.log(e);
+    let date = e.target.value
+    let regExp = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/
+
+    if (date.match(regExp)) e.target.style.backgroundColor = "green"
+        else e.target.style.backgroundColor = "red"
 }
 
 function testNumber (e) {
-    console.log(e);
+    let tel = e.target.value
+    let regExp = /^\d{9}$/
+                 
+    if (tel.match(regExp)) e.target.style.backgroundColor = "green"
+    else e.target.style.backgroundColor = "red"
 }
+
 function testMail (e) {
-    console.log(e);
+    let mail = e.target.value
+    let regExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+
+    if (mail.match(regExp)) e.target.style.backgroundColor = "green"
+    else e.target.style.backgroundColor = "red"
+
 }
 function testHex (e) {
-    console.log(e);
+    let hex = e.target.value
+    let regExp = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/
+
+    if (hex.match(regExp)) e.target.style.backgroundColor = "green"
+    else e.target.style.backgroundColor = "red"
+
 }
 function testIP (e) {
-    console.log(e);
+    let ip = e.target.value
+    let regExp = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/
+
+    if (ip.match(regExp)) e.target.style.backgroundColor = "green"
+    else e.target.style.backgroundColor = "red"
 }
+
 function testUrl (e) {
-    console.log(e);
+    let url = e.target.value
+    let regExp = /^(https?:\/\/)?(www\.)?([a-zA-Z0-9]+(-[a-zA-Z0-9]+)*\.)+[a-zA-Z]{2,}(\/\S*)?$/
+    
+    if (url.match(regExp)) e.target.style.backgroundColor = "green"
+        else e.target.style.backgroundColor = "red"
 }
+
 function testPass (e) {
-    console.log(e);
+    let pass = e.target.value
+    let regExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/
+
+    if (pass.match(regExp)) e.target.style.backgroundColor = "green"
+    else e.target.style.backgroundColor = "red"
 }
+
 function testNif (e) {
-    console.log(e);
+    let nif = e.target.value
+    let regExp = /^\d{8}[a-zA-Z]$/
+    
+    if (nif.match(regExp)) e.target.style.backgroundColor = "green"
+        else e.target.style.backgroundColor = "red"
 }
 function testMatricula (e) {
-    console.log(e);
+    let matricula = e.target.value
+    let regExp = /^[0-9]{4}[a-zA-Z]{3}$/
+
+    if (matricula.match(regExp)) e.target.style.backgroundColor = "green"
+    else e.target.style.backgroundColor = "red"
 }

@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 11 (enunciado)</title>
+    <title>Practica 11 (enunciado)</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        img {
+            width: 25px;
+            height: 25px;
+        }
+
+        #description {
+            position: absolute;
+            top: 27%;
+            left: 29%;
+            font-size: 23px;
+            background-color: lightblue;
+            width: 40%;
+            height: 47%;
+            border-radius: 20px;
+            border: 2px solid black;
+            box-shadow: 8px 8px 6px rebeccapurple;
+            text-align: center;
+        }
+
+        strong {
+            font-variant: small-caps;
+            text-decoration: underline 3px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #resultado {
+            position: absolute;
+            top: 83%;
+            left: 46%;
+        }
+
+        button {
+            width: 150px;
+            height: 40px;
+            font-size: 20px;
+            background-color: lightblue;
+            margin-right: 10px;
+            box-shadow: 2px 2px 4px rebeccapurple;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-    
+
+    <a href="../../../index.html"><img src="../../img/volver.jpeg"></a>
+    <h1>Ejercicio completado!!!!</h1>
+    <div id="description">
+        <p><strong>PR0611: Expresiones regulares (II)</strong></p>
+
+        <p>Implementa una página Web que tenga un cuadro de texto y un botón de enviar. El usuario escribirá
+            un texto y, cuando haga click en el botón de enviar, se analizará el texto introducido con 
+            expresiones regulares para localizar todas las fechas con la estructura dd/mm/aaaa. Una vez 
+            localizadas reemplazalas por la misma fecha, pero de la forma día de mes de año, por ejemplo, 
+            la fecha 16/12/2022 lo reemplazaría por la cadena 16 del 12 de 2022. El texto con las fechas 
+            modificadas se mostrará en un párrafo en la página Web.</p>
+
+        <p>Lo ideal sería que te aseguraras de que las fechas son válidas, es decir, no identificaría como 
+            fecha una cadena de la forma 45/12/2020 o 25/25/1990.</p>
+    </div>
+        
+    <div id="resultado">
+        <a href="../resultado/practica11.html"><button>Resultado</button></a>
+    </div>
+
 </body>
 </html>
